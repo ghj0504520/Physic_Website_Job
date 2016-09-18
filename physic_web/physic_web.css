@@ -1,5 +1,12 @@
 .carousel_content{/*更改投影片內容字體*/
 	
-	font-size:80px;font-family:bold;
+	color:#b0c4de;
+	font-size:60px;
+	font-family:Arial, sans-serif;
 	
 }
+
+.col-md-3point5 {
+	width: 25%;
+}
+.col-md-8point5 {width: 81.25%;}
