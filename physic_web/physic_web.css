@@ -10,3 +10,11 @@
 	width: 25%;
 }
 .col-md-8point5 {width: 81.25%;}
+
+.W1366{
+	width: 1366px;
+}
+
+.hCenter {
+    margin-left:10%;
+}
