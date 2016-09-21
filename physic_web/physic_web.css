@@ -3,18 +3,15 @@
 	color:#b0c4de;
 	font-size:60px;
 	font-family:Arial, sans-serif;
-	
 }
-
-.col-md-3point5 {
-	width: 25%;
-}
-.col-md-8point5 {width: 81.25%;}
 
 .W1366{
 	width: 1366px;
 }
 
-.hCenter {
-    margin-left:10%;
+.heading-text {
+	height:152px;/*與heading的長度相同*/
+	width:142px;
+    text-align:center;
+	color:#b0c4de;
 }
