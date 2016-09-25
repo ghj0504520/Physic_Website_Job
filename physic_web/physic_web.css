@@ -21,3 +21,19 @@
 	 width:"840px"; 
 	 height:"400px";
 }
+
+.inner-html-size{
+	width:100%;
+}
+.inner-html-propotion{
+	transform: scale(1.0);
+	transform-origin:0 0; 
+	-ms-transform: scale(1.0); //ie
+	-ms-transform-origin:0 0;
+	-moz-transform: scale(1.0); //firefox
+	-moz-transform-origin:0 0;
+	-o-transform: scale(1.0); //opera
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1.0); //chrome
+	-webkit-transform-origin: 0 0; 
+}

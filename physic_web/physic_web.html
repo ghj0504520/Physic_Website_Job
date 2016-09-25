@@ -3,7 +3,7 @@
 
 
 
-Version : 1.3
+Version : 1.4
 
 
 
@@ -125,7 +125,7 @@ Version : 1.3
                             </ol>
                             <div class="carousel-inner" role="listbox">
                                     <div class="item active">
-                                            <img class="carousel_height" src="art.jpg" alt="First slide">
+                                            <img class="carousel_height" src="carousel_picture/art.jpg" alt="First slide">
                                             <div class="container">
                                                     <div class="carousel-caption">
                                                             <span class="carousel_content">Art</span>
@@ -137,7 +137,7 @@ Version : 1.3
                                             </div>
                                     </div>
                                     <div class="item">
-                                            <img src="engineering_product.jpg">
+                                            <img src="carousel_picture/engineering.jpg">
                                             <div class="container">
                                                     <div class="carousel-caption">
                                                             <span class="carousel_content">Engineering/Product</span>
@@ -147,7 +147,7 @@ Version : 1.3
                                             </div>
                                     </div>
                                     <div class="item">
-                                            <img src="technology.jpg">
+                                            <img src="carousel_picture/technology.jpg">
                                             <div class="container">
                                                     <div class="carousel-caption">
                                                             <span class="carousel_content">Technology</span>
@@ -157,7 +157,7 @@ Version : 1.3
                                             </div>
                                     </div>
                                     <div class="item">
-                                            <img src="science.jpg">
+                                            <img src="carousel_picture/science.jpg">
                                             <div class="container"> <!-- 要再加入資料，就要container-->
                                                     <div class="carousel-caption">
                                                             <span class="carousel_content">Science</span>
@@ -167,7 +167,7 @@ Version : 1.3
                                             </div>
                                     </div>
                                     <div class="item">
-                                            <img src="math.jpg">
+                                            <img src="carousel_picture/math.jpg">
                                                     <div class="container">
                                                             <div class="carousel-caption">
                                                                     <span class="carousel_content">Math</span>
@@ -204,12 +204,12 @@ Version : 1.3
               Use col-lg to control the number of the heading
               max width:1170px
               -->
-              <div class="row W1366" >
+				<div class="row W1366" >
 
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button id="art_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Art"><img class="img-circle " src="art.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button id="art_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Art"><img class="img-circle " src="heading_picture/art.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Art</h2>
                     </div><!-- /.col-lg-2 -->
 
@@ -217,7 +217,7 @@ Version : 1.3
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button id="eng_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Engineering"><img class="img-circle " src="engineering_product.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button id="eng_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Engineering"><img class="img-circle " src="heading_picture/engineering.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Engineering</h2>
                     </div><!-- /.col-lg-2 -->
 
@@ -225,7 +225,7 @@ Version : 1.3
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Technology"><img class="img-circle " src="technology.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Technology"><img class="img-circle " src="heading_picture/technology.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Technology</h2>
                     </div><!-- /.col-lg-2 -->
 
@@ -233,7 +233,7 @@ Version : 1.3
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Science"><img class="img-circle " src="science.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Science"><img class="img-circle " src="heading_picture/science.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Science</h2>
                     </div><!-- /.col-lg-2 -->
 
@@ -241,62 +241,38 @@ Version : 1.3
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Math"><img class="img-circle " src="math.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Math"><img class="img-circle " src="heading_picture/math.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Math</h2>
                     </div><!-- /.col-lg-2 -->
 
 
-              </div><!-- /.row -->
+				</div><!-- /.row -->
 
 
-              <!-- START THE FEATURETTES -->
+				<!-- START THE FEATURETTES -->
 
-              <hr class="featurette-divider">
+				<!--<hr class="featurette-divider">-->
+			  
+				<!--下方的資料-->
+				<div class="inner-html-propotion">
+					<embed src="html/demo.htm" class="inner-html-size" style="height:2400px"/>
+				</div>
 
-              <div class="row featurette">
-                    <div class="col-md-7">
-                            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                    </div>
-                    <div class="col-md-5">
-                            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                    </div>
-              </div>
+				<hr class="featurette-divider">
 
-              <hr class="featurette-divider">
+				<div>
+					<embed src="html/material.htm" class="inner-html-size" style="height:1400px"/>
+				</div>
 
-              <div class="row featurette">
-                    <div class="col-md-7 col-md-push-5">
-                            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                    </div>
-                    <div class="col-md-5 col-md-pull-7">
-                            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                    </div>
-              </div>
+				<!--<hr class="featurette-divider">-->
 
-              <hr class="featurette-divider">
-
-              <div class="row featurette">
-                    <div class="col-md-7">
-                            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                    </div>
-                    <div class="col-md-5">
-                            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                    </div>
-              </div>
-
-              <hr class="featurette-divider">
-
-              <!-- /END THE FEATURETTES -->
+				<!-- /END THE FEATURETTES -->
 
 
-              <!-- FOOTER -->
-              <footer>
-                    <p class="pull-right"><a href="#">Back to top</a></p>
-                    <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-              </footer>
+				<!-- FOOTER -->
+				<footer>
+                    <p>&copy; 2016 Physics Web &middot;</p>
+				</footer>
         </div><!-- /.container -->
 
 
@@ -306,7 +282,7 @@ Version : 1.3
 
         <div class="modal fade" id="Art" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
-            <div class="modal-dialog modal-lg" style="opacity: 0.85;">
+            <div class="modal-dialog modal-lg" style="opacity:1;">
 
                 <div class="modal-content" style="background-color: #687077;" >
 
@@ -343,8 +319,8 @@ Version : 1.3
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
-										<div class="table1container">
-											<embed src="move.pdf" width="800px" height="800px" />
+										<div class="table1container"><!--pdf data-->
+											<embed src="heading_pdf/art.pdf" width="830px" height="800px" />
 										</div>
                                     </div>
                                 </div>
@@ -405,7 +381,9 @@ Version : 1.3
                                 </div>
                                 <div id="collapse4" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
-
+										<div class="table1container"><!--pdf data-->
+											<embed src="heading_pdf/engineering.pdf" width="800px" height="800px" />
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -449,7 +427,7 @@ Version : 1.3
                                 <div id="collapse5" class="panel-collapse collapse in">
                                     <div class="panel-body" style="background-color: #687077">
                                         <div class="table1container">
-
+											
                                         </div>
                                     </div>
                                 </div>
@@ -464,7 +442,9 @@ Version : 1.3
                                 </div>
                                 <div id="collapse6" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
-
+										<div class="table1container"><!--pdf data-->
+												<embed src="heading_pdf/technology.pdf" width="800px" height="800px" />
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -507,7 +487,7 @@ Version : 1.3
                                 <div id="collapse7" class="panel-collapse collapse in">
                                     <div class="panel-body" style="background-color: #687077">
                                         <div class="table1container">
-
+											
                                         </div>
                                     </div>
                                 </div>
@@ -522,7 +502,9 @@ Version : 1.3
                                 </div>
                                 <div id="collapse8" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
-
+										<div class="table1container"><!--pdf data-->
+											<embed src="heading_pdf/science.pdf" width="800px" height="800px" />
+										</div>
                                     </div>
                                 </div>
                             </div>
@@ -578,7 +560,9 @@ Version : 1.3
                                 </div>
                                 <div id="collapse10" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
-
+										<div class="table1container"><!--pdf data-->
+											<embed src="heading_pdf/math.pdf" width="800px" height="800px" />
+										</div>
                                     </div>
                                 </div>
                             </div>
