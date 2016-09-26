@@ -53,17 +53,110 @@ Version : 1.4
 		    }
         </style>
 		<script type="text/javascript">
-			$(function(){
-				$('#art_btn').click();
-			});
+
 			$(document).ready(function() {
-				$('#eng_btn').on('click', function(ev) {
- 
-				$("#eng_video")[0].src += "?autoplay=1";
-				ev.preventDefault();
- 
-				});
-			});
+
+			    var videoArt="https://www.youtube.com/embed/BCkHnvDGWOY?enablejsapi=1";
+                var videoEng="https://www.youtube.com/embed/II1g92jFItE";
+                var videoTec="";
+                var videoSci="";
+                var videoMath="";
+
+                $('#art_btn').click();
+                $('#iframeArt').attr('src', videoArt+"&autoplay=1");
+
+
+                $("#collapseArt1").on("show.bs.collapse", function(){
+
+                    $('#iframeArt')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                });
+
+                $("#collapseArt1").on("hide.bs.collapse", function(){
+                    $('#iframeArt')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                });
+
+                $("#modalArt").on('show.bs.modal', function () {
+                    $('#iframeArt').attr('src', videoArt+"&autoplay=1");
+                });
+                $("#modalArt").on('hide.bs.modal', function () {
+                    $('#iframeArt').attr('src', videoArt+"&autoplay=0");
+                });
+
+
+
+
+                $("#collapseEng1").on("show.bs.collapse", function(){
+
+                    $('#iframeEng')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                });
+
+                $("#collapseEng1").on("hide.bs.collapse", function(){
+                    $('#iframeEng')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                });
+
+
+                $("#modalEngineering").on('show.bs.modal', function () {
+                    $('#iframeEng').attr('src', videoEng+"&autoplay=1");
+                });
+                $("#modalEngineering").on('hide.bs.modal', function () {
+                    $('#iframeEng').attr('src', videoEng+"&autoplay=0");
+                });
+
+
+                $("#collapseTec1").on("show.bs.collapse", function(){
+
+                    $('#iframeTec')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                });
+
+                $("#collapseTec1").on("hide.bs.collapse", function(){
+                    $('#iframeTec')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                });
+
+                $("#modalTechnology").on('show.bs.modal', function () {
+                    $('#iframeTec').attr('src', videoTec+"&autoplay=1");
+                });
+                $("#modalTechnology").on('hide.bs.modal', function () {
+                    $('#iframeTec').attr('src', videoTec+"&autoplay=0");
+                });
+
+
+
+
+                $("#collapseSci1").on("show.bs.collapse", function(){
+
+                    $('#iframeSci')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                });
+
+                $("#collapseSci1").on("hide.bs.collapse", function(){
+                    $('#iframeSci')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                });
+
+                $("#modalScience").on('show.bs.modal', function () {
+                    $('#iframeSci').attr('src', videoSci+"&autoplay=1");
+                });
+                $("#modalScience").on('hide.bs.modal', function () {
+                    $('#iframeSci').attr('src', videoSci+"&autoplay=0");
+                });
+
+
+
+
+                $("#collapseMath1").on("show.bs.collapse", function(){
+
+                    $('#iframeMath')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                });
+
+                $("#collapseMath1").on("hide.bs.collapse", function(){
+                    $('#iframeMath')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                });
+
+                $("#modalMath").on('show.bs.modal', function () {
+                    $('#iframeMath').attr('src', videoMath+"&autoplay=1");
+                });
+                $("#modalMath").on('hide.bs.modal', function () {
+                    $('#iframeMath').attr('src', videoMath+"&autoplay=0");
+                });
+            });
 		</script>
     </head>
 <!-- NAVBAR
@@ -209,7 +302,7 @@ Version : 1.4
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button id="art_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Art"><img class="img-circle " src="heading_picture/art.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button id="art_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalArt"><img class="img-circle " src="heading_picture/art.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Art</h2>
                     </div><!-- /.col-lg-2 -->
 
@@ -217,7 +310,7 @@ Version : 1.4
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button id="eng_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Engineering"><img class="img-circle " src="heading_picture/engineering.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button id="eng_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalEngineering"><img class="img-circle " src="heading_picture/engineering.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Engineering</h2>
                     </div><!-- /.col-lg-2 -->
 
@@ -225,7 +318,7 @@ Version : 1.4
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Technology"><img class="img-circle " src="heading_picture/technology.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalTechnology"><img class="img-circle " src="heading_picture/technology.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Technology</h2>
                     </div><!-- /.col-lg-2 -->
 
@@ -233,7 +326,7 @@ Version : 1.4
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Science"><img class="img-circle " src="heading_picture/science.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalScience"><img class="img-circle " src="heading_picture/science.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Science</h2>
                     </div><!-- /.col-lg-2 -->
 
@@ -241,7 +334,7 @@ Version : 1.4
 
                     <div class="col-md-1 col-md-offset-1">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#Math"><img class="img-circle " src="heading_picture/math.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalMath"><img class="img-circle " src="heading_picture/math.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Math</h2>
                     </div><!-- /.col-lg-2 -->
 
@@ -280,7 +373,7 @@ Version : 1.4
 
         <!--art child window -->
 
-        <div class="modal fade" id="Art" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalArt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
             <div class="modal-dialog modal-lg" style="opacity:1;">
 
@@ -298,13 +391,13 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1">Media</a>
+                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseArt1">Media</a>
                                     </h4>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse in">
+                                <div id="collapseArt1" class="panel-collapse collapse in">
                                     <div class="panel-body" style="background-color: #687077">
                                         <div class="table1container">
-                                            <iframe width="830" height="400" src="https://www.youtube.com/embed/BCkHnvDGWOY?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                                            <iframe id="iframeArt" width="830" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -314,10 +407,10 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse2">Content</a>
+                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseArt2">Content</a>
                                     </h4>
                                 </div>
-                                <div id="collapse2" class="panel-collapse collapse">
+                                <div id="collapseArt2" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
 										<div class="table1container"><!--pdf data-->
 											<embed src="heading_pdf/art.pdf" width="830px" height="800px" />
@@ -342,7 +435,7 @@ Version : 1.4
 
         <!--engineering child window-->
 
-        <div class="modal fade" id="Engineering" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalEngineering" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
             <div class="modal-dialog modal-lg" style="opacity: 0.85;">
 
@@ -360,13 +453,13 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse3">Media</a>
+                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapseEng1">Media</a>
                                     </h4>
                                 </div>
-                                <div id="collapse3" class="panel-collapse collapse in">
+                                <div id="collapseEng1" class="panel-collapse collapse in">
                                     <div class="panel-body" style="background-color: #687077">
                                         <div class="table1container">
-											<iframe id="eng_video" width="830" height="400" src="https://www.youtube.com/embed/II1g92jFItE" frameborder="0" allowfullscreen></iframe>
+											<iframe id="iframeEng" width="830" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -376,10 +469,10 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4">Content</a>
+                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapseEng2">Content</a>
                                     </h4>
                                 </div>
-                                <div id="collapse4" class="panel-collapse collapse">
+                                <div id="collapseEng2" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
 										<div class="table1container"><!--pdf data-->
 											<embed src="heading_pdf/engineering.pdf" width="800px" height="800px" />
@@ -403,7 +496,7 @@ Version : 1.4
 
         <!--technology child window-->
 
-        <div class="modal fade" id="Technology" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalTechnology" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
             <div class="modal-dialog modal-lg" style="opacity: 0.85;">
 
@@ -421,10 +514,10 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse5">Media</a>
+                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapseTec1">Media</a>
                                     </h4>
                                 </div>
-                                <div id="collapse5" class="panel-collapse collapse in">
+                                <div id="collapseTec1" class="panel-collapse collapse in">
                                     <div class="panel-body" style="background-color: #687077">
                                         <div class="table1container">
 											
@@ -437,10 +530,10 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse6">Content</a>
+                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapseTec2">Content</a>
                                     </h4>
                                 </div>
-                                <div id="collapse6" class="panel-collapse collapse">
+                                <div id="collapseTec2" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
 										<div class="table1container"><!--pdf data-->
 												<embed src="heading_pdf/technology.pdf" width="800px" height="800px" />
@@ -463,7 +556,7 @@ Version : 1.4
 
         <!--science child window-->
 
-        <div class="modal fade" id="Science" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalScience" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
             <div class="modal-dialog modal-lg" style="opacity: 0.85;">
 
@@ -481,10 +574,10 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapse7">Media</a>
+                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseSci1">Media</a>
                                     </h4>
                                 </div>
-                                <div id="collapse7" class="panel-collapse collapse in">
+                                <div id="collapseSci1" class="panel-collapse collapse in">
                                     <div class="panel-body" style="background-color: #687077">
                                         <div class="table1container">
 											
@@ -497,10 +590,10 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapse8">Content</a>
+                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseSci2">Content</a>
                                     </h4>
                                 </div>
-                                <div id="collapse8" class="panel-collapse collapse">
+                                <div id="collapseSci2" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
 										<div class="table1container"><!--pdf data-->
 											<embed src="heading_pdf/science.pdf" width="800px" height="800px" />
@@ -521,7 +614,7 @@ Version : 1.4
         <!--child window end -->
         <!--math child window-->
 
-        <div class="modal fade" id="Math" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalMath" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
             <div class="modal-dialog modal-lg" style="opacity: 0.85;">
 
@@ -539,10 +632,10 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion5" href="#collapse9">Media</a>
+                                        <a data-toggle="collapse" data-parent="#accordion5" href="#collapseMath1">Media</a>
                                     </h4>
                                 </div>
-                                <div id="collapse9" class="panel-collapse collapse in">
+                                <div id="collapseMath1" class="panel-collapse collapse in">
                                     <div class="panel-body" style="background-color: #687077">
                                         <div class="table1container">
 
@@ -555,10 +648,10 @@ Version : 1.4
                             <div class="panel panel-default" style="border-width: 3px">
                                 <div class="panel-heading" style="background-color: gray">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion5" href="#collapse10">Content</a>
+                                        <a data-toggle="collapse" data-parent="#accordion5" href="#collapseMath2">Content</a>
                                     </h4>
                                 </div>
-                                <div id="collapse10" class="panel-collapse collapse">
+                                <div id="collapseMath2" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
 										<div class="table1container"><!--pdf data-->
 											<embed src="heading_pdf/math.pdf" width="800px" height="800px" />
@@ -580,16 +673,6 @@ Version : 1.4
         <!--child window end -->
 
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
-        <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-        <script src="../../assets/js/vendor/holder.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     </body>
   
 	
