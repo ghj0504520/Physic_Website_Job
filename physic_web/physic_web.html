@@ -38,6 +38,9 @@ Version : 1.4
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="ie-emulation-modes-warning.js"></script>
+		
+		<!-- physic_web.js-->
+		<script src="physic_web.js"></script>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -54,109 +57,7 @@ Version : 1.4
         </style>
 		<script type="text/javascript">
 
-			$(document).ready(function() {
-
-			    var videoArt="https://www.youtube.com/embed/BCkHnvDGWOY?enablejsapi=1";
-                var videoEng="https://www.youtube.com/embed/II1g92jFItE";
-                var videoTec="";
-                var videoSci="";
-                var videoMath="";
-
-                $('#art_btn').click();
-                $('#iframeArt').attr('src', videoArt+"&autoplay=1");
-
-
-                $("#collapseArt1").on("show.bs.collapse", function(){
-
-                    $('#iframeArt')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                });
-
-                $("#collapseArt1").on("hide.bs.collapse", function(){
-                    $('#iframeArt')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                });
-
-                $("#modalArt").on('show.bs.modal', function () {
-                    $('#iframeArt').attr('src', videoArt+"&autoplay=1");
-                });
-                $("#modalArt").on('hide.bs.modal', function () {
-                    $('#iframeArt').attr('src', videoArt+"&autoplay=0");
-                });
-
-
-
-
-                $("#collapseEng1").on("show.bs.collapse", function(){
-
-                    $('#iframeEng')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                });
-
-                $("#collapseEng1").on("hide.bs.collapse", function(){
-                    $('#iframeEng')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                });
-
-
-                $("#modalEngineering").on('show.bs.modal', function () {
-                    $('#iframeEng').attr('src', videoEng+"&autoplay=1");
-                });
-                $("#modalEngineering").on('hide.bs.modal', function () {
-                    $('#iframeEng').attr('src', videoEng+"&autoplay=0");
-                });
-
-
-                $("#collapseTec1").on("show.bs.collapse", function(){
-
-                    $('#iframeTec')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                });
-
-                $("#collapseTec1").on("hide.bs.collapse", function(){
-                    $('#iframeTec')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                });
-
-                $("#modalTechnology").on('show.bs.modal', function () {
-                    $('#iframeTec').attr('src', videoTec+"&autoplay=1");
-                });
-                $("#modalTechnology").on('hide.bs.modal', function () {
-                    $('#iframeTec').attr('src', videoTec+"&autoplay=0");
-                });
-
-
-
-
-                $("#collapseSci1").on("show.bs.collapse", function(){
-
-                    $('#iframeSci')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                });
-
-                $("#collapseSci1").on("hide.bs.collapse", function(){
-                    $('#iframeSci')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                });
-
-                $("#modalScience").on('show.bs.modal', function () {
-                    $('#iframeSci').attr('src', videoSci+"&autoplay=1");
-                });
-                $("#modalScience").on('hide.bs.modal', function () {
-                    $('#iframeSci').attr('src', videoSci+"&autoplay=0");
-                });
-
-
-
-
-                $("#collapseMath1").on("show.bs.collapse", function(){
-
-                    $('#iframeMath')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                });
-
-                $("#collapseMath1").on("hide.bs.collapse", function(){
-                    $('#iframeMath')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                });
-
-                $("#modalMath").on('show.bs.modal', function () {
-                    $('#iframeMath').attr('src', videoMath+"&autoplay=1");
-                });
-                $("#modalMath").on('hide.bs.modal', function () {
-                    $('#iframeMath').attr('src', videoMath+"&autoplay=0");
-                });
-            });
+			
 		</script>
     </head>
 <!-- NAVBAR
@@ -347,13 +248,13 @@ Version : 1.4
 				<!--<hr class="featurette-divider">-->
 			  
 				<!--下方的資料-->
-				<div class="inner-html-propotion">
+				<div class="inner-html">
 					<embed src="html/demo.htm" class="inner-html-size" style="height:2400px"/>
 				</div>
 
 				<hr class="featurette-divider">
 
-				<div>
+				<div class="inner-html">
 					<embed src="html/material.htm" class="inner-html-size" style="height:1400px"/>
 				</div>
 
@@ -373,29 +274,27 @@ Version : 1.4
 
         <!--art child window -->
 
-        <div class="modal fade" id="modalArt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade"  id="modalArt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
             <div class="modal-dialog modal-lg" style="opacity:1;">
 
-                <div class="modal-content" style="background-color: #687077;" >
-
+                <div class="modal-content" style="background-color: #003C9D" >
                     <div class="modal-header">
-
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel1">Art</h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+						<h3 class="modal-title" id="myModalLabel2">Art</h3>						
                     </div>
 
                     <div class="modal-body">
                         <div class="panel-group" id="accordion1" >
 
-                            <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                            <div class="panel panel-default" style="border-width: 3px;">
+                                <div class="panel-heading" style="background-color:	#0088A8">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion1" href="#collapseArt1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseArt1" class="panel-collapse collapse in">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body" style="background-color: #0088A8">
                                         <div class="table1container">
                                             <iframe id="iframeArt" width="830" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
@@ -405,15 +304,15 @@ Version : 1.4
 
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                                <div class="panel-heading" style="background-color:	#0088A8">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion1" href="#collapseArt2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseArt2" class="panel-collapse collapse">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body" style="background-color: #0088A8">
 										<div class="table1container"><!--pdf data-->
-											<embed src="heading_pdf/art.pdf" width="830px" height="800px" />
+											<embed src="heading_pdf/art.pdf" width="830px" height="670px" />
 										</div>
                                     </div>
                                 </div>
@@ -421,9 +320,10 @@ Version : 1.4
                         </div>
                     </div>
 
-                    <div class="modal-footer">
+                    <!--<div class="modal-footer">
 
                     </div>
+					-->
                 </div>
             </div>
         </div>
@@ -520,7 +420,7 @@ Version : 1.4
                                 <div id="collapseTec1" class="panel-collapse collapse in">
                                     <div class="panel-body" style="background-color: #687077">
                                         <div class="table1container">
-											
+											<iframe id="iframeTec" width="830" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -536,7 +436,7 @@ Version : 1.4
                                 <div id="collapseTec2" class="panel-collapse collapse">
                                     <div class="panel-body" style="background-color: #687077">
 										<div class="table1container"><!--pdf data-->
-												<embed src="heading_pdf/technology.pdf" width="800px" height="800px" />
+											<embed src="heading_pdf/technology.pdf" width="800px" height="800px" />
 										</div>
                                     </div>
                                 </div>

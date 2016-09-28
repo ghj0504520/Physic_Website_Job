@@ -25,7 +25,7 @@
 .inner-html-size{
 	width:100%;
 }
-.inner-html-propotion{
+.inner-html{
 	transform: scale(1.0);
 	transform-origin:0 0; 
 	-ms-transform: scale(1.0); //ie
@@ -35,5 +35,19 @@
 	-o-transform: scale(1.0); //opera
 	-o-transform-origin: 0 0;
 	-webkit-transform: scale(1.0); //chrome
-	-webkit-transform-origin: 0 0; 
+	-webkit-transform-origin: 0 0;
+	
+	
+	background-color:;
 }
+
+.modal-title-style{
+	color:;
+	font-size:15px;
+}
+.modal-header {
+    padding:9px 15px;
+    border-bottom:0px;
+    background-color:#00BBFF;
+ }
+ 
