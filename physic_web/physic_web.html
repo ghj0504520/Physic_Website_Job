@@ -21,7 +21,9 @@ Version : 1.4
         <link rel="icon" href="favicon.ico">
 
         <title>Carousel Template for Bootstrap</title>
-
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+		
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- carousel 箭頭消失-->
 	    <!-- jquery-->
@@ -54,9 +56,39 @@ Version : 1.4
 		    body{
 			    background-color:#444444;
 		    }
+			@media screen and (max-width:1400px){
+				/*if screen width is too small*/
+				
+			}
+			@media screen and (max-height:800px){
+				/*if screen height is too small*/
+				.carousel {
+					max-height: 500px;
+				}
+				.carousel .item {
+					height: 500px;		/*change inner item height of the carousel*/
+				}
+				
+			}
+			
+			
+			@media screen and (min-width:1401px){
+			
+			}
+			@media screen and (min-height:801px){
+				.carousel {
+					max-height: 650px;
+				}
+				.carousel .item {
+					height: 650px;		/*change inner item height of the carousel*/
+				}
+				
+			}
         </style>
 		<script type="text/javascript">
-
+			/*alert("Total Height: " + screen.height);
+			alert("Total Width: " + screen.width);*/
+			
 			
 		</script>
     </head>
@@ -201,23 +233,23 @@ Version : 1.4
 				<div class="row W1366" >
 
 
-                    <div class="col-md-1 col-md-offset-1">
+                    <div class="col-sm-1 col-sm-offset-1">
 
                             <button id="art_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalArt"><img class="img-circle " src="heading_picture/art.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Art</h2>
-                    </div><!-- /.col-lg-2 -->
+                    </div><!-- /.col-md-1 -->
 
 
 
-                    <div class="col-md-1 col-md-offset-1">
+                    <div class="col-sm-1 col-sm-offset-1">
 
                             <button id="eng_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalEngineering"><img class="img-circle " src="heading_picture/engineering.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Engineering</h2>
-                    </div><!-- /.col-lg-2 -->
+                    </div><!-- /.col-md-1 -->
 
 
 
-                    <div class="col-md-1 col-md-offset-1">
+                    <div class="col-sm-1 col-sm-offset-1">
 
                             <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalTechnology"><img class="img-circle " src="heading_picture/technology.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Technology</h2>
@@ -225,7 +257,7 @@ Version : 1.4
 
 
 
-                    <div class="col-md-1 col-md-offset-1">
+                    <div class="col-sm-1 col-sm-offset-1">
 
                             <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalScience"><img class="img-circle " src="heading_picture/science.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Science</h2>
@@ -233,7 +265,7 @@ Version : 1.4
 
 
 
-                    <div class="col-md-1 col-md-offset-1">
+                    <div class="col-sm-1 col-sm-offset-1">
 
                             <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalMath"><img class="img-circle " src="heading_picture/math.jpg" alt="Generic placeholder image" width="140" height="140"></button>
                             <h2 class="heading-text">Math</h2>
@@ -249,7 +281,8 @@ Version : 1.4
 			  
 				<!--下方的資料-->
 				<div class="inner-html">
-					<embed src="html/demo.htm" class="inner-html-size" style="height:2400px"/>
+					<embed src="html/demo.htm" class="inner-html-size" style="height:2400px"></embed>
+					
 				</div>
 
 				<hr class="featurette-divider">
