@@ -4,21 +4,22 @@ $(document).ready(function() {
 	
 	
 	/*改變art的網址*/
-	var videoArt="https://www.youtube.com/embed/BCkHnvDGWOY?enablejsapi=1";
-	
+	var videoART="https://www.youtube.com/embed/BCkHnvDGWOY";
+	var videoArt=videoART+"?enablejsapi=1";
 	/*改變engineering的網址*/
-	var videoEng="https://www.youtube.com/embed/II1g92jFItE?enablejsapi=1";
-	
+	var videoENG="https://www.youtube.com/embed/II1g92jFItE";
+	var videoEng=videoENG+"?enablejsapi=1";
 	/*改變technology的網址*/
-	var videoTec="https://www.youtube.com/embed/BCkHnvDGWOY?enablejsapi=1";
-	
+	var videoTEC="";
+	var  videoTec=videoTEC+"?enablejsapi=1";
 	/*改變science的網址*/
-	var videoSci="";
-	
+	var videoSCI="";
+	var videoSci=videoSCI+"?enablejsapi=1";
 	/*改變math的網址*/
-	var videoMath="";
+	var videoMATH="";
+	var videoMath=videoMATH+"?enablejsapi=1";
 
-	
+
 	/*======================================================================*/
 	
 	
@@ -30,7 +31,7 @@ $(document).ready(function() {
 	$('#art_btn').click();
 	$('#iframeArt').attr('src', videoArt+"&autoplay=1");
 
-	if(videoArt.length)
+	if(videoArt!="?enablejsapi=1")
 	{
  		$("#collapseArt1").on("show.bs.collapse", function () {
   
@@ -54,8 +55,8 @@ $(document).ready(function() {
  	}
 
 
-	
- 	if(videoEng.length) 
+
+	if(videoEng!="?enablejsapi=1")
 	{
  		$("#collapseEng1").on("show.bs.collapse", function () {
   
@@ -74,13 +75,14 @@ $(document).ready(function() {
  		$("#modalEngineering").on('hide.bs.modal', function () {
  			$('#iframeEng').attr('src', videoEng + "&autoplay=0");
  		});
- 	}else
+ 	}
+ 	else
 	{
  		$("#collapseEng1").remove();
  	}
 
 
-	if(videoTec.length) 
+	if(videoTec!="?enablejsapi=1")
 	{
  		$("#collapseTec1").on("show.bs.collapse", function () {
 		$('#iframeTec')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
@@ -97,14 +99,15 @@ $(document).ready(function() {
  		$("#modalTechnology").on('hide.bs.modal', function () {
  			$('#iframeTec').attr('src', videoTec + "&autoplay=0");
  		});
- 	}else
+ 	}
+ 	else
 	{
  		$("#collapseTec1").remove();
  	}
 
 
 
-	if(videoSci.length)
+	if(videoSci!="?enablejsapi=1")
 	{
  		$("#collapseSci1").on("show.bs.collapse", function () {
   
@@ -122,14 +125,15 @@ $(document).ready(function() {
  		$("#modalScience").on('hide.bs.modal', function () {
  			$('#iframeSci').attr('src', videoSci + "&autoplay=0");
  		});
- 	}else{
+ 	}
+ 	else{
  		$("#collapseSci1").remove();
  	}
 
 
 
 
-	if(videoMath.length)
+	if(videoMath!="?enablejsapi=1")
 	{
  		$("#collapseMath1").on("show.bs.collapse", function () {
   
@@ -149,7 +153,8 @@ $(document).ready(function() {
  		$("#modalMath").on('hide.bs.modal', function () {
  			$('#iframeMath').attr('src', videoMath + "&autoplay=0");
  		});
- 	}else
+ 	}
+ 	else
 	{
  		$("#collapseMath1").remove();
  	}
