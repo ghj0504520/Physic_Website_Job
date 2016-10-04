@@ -65,9 +65,22 @@ Version : 1.5
 					width:80%;
 				}
 			}
+		
 			
-			
-			@media screen and (max-height:800px){
+			@media screen and (max-height:910px){
+				/*if screen height is too small*/
+				.carousel {
+					max-height: 575px;
+				}
+				.carousel .item {
+					height: 575px;		/*change inner item height of the carousel*/
+				}
+				.modal-content-style{
+					height:450px
+				}
+				
+			}
+			@media screen and (max-height:830px){
 				/*if screen height is too small*/
 				.carousel {
 					max-height: 500px;
@@ -75,19 +88,26 @@ Version : 1.5
 				.carousel .item {
 					height: 500px;		/*change inner item height of the carousel*/
 				}
-				.modal-content-style{
-					height:450px
+				
+			}
+			@media screen and (max-height:765px){
+				/*if screen height is too small*/
+				.carousel {
+					max-height: 425px;
+				}
+				.carousel .item {
+					height: 425px;		/*change inner item height of the carousel*/
 				}
 				
 			}
 			
-			@media screen and (max-height:650px){
+			@media screen and (max-height:680px){
 				/*if screen height is too small*/
 				.carousel {
-					max-height:250px;
+					max-height:300px;
 				}
 				.carousel .item {
-					height: 250px;		/*change inner item height of the carousel*/
+					height: 300px;		/*change inner item height of the carousel*/
 				}
 				.carousel_content{/*更改投影片內容字體*/
 					font-size:20px;
@@ -102,7 +122,7 @@ Version : 1.5
 			@media screen and (min-width:1401px){
 			
 			}
-			@media screen and (min-height:801px){
+			@media screen and (min-height:911px){
 				.carousel {
 					max-height: 650px;
 				}

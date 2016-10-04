@@ -166,29 +166,29 @@ $(document).ready(function() {
 
 		if(screen.height>=800)
 		{
-			$('#iframeArt')[0].setAttribute("height", 400);
-			$('#iframeEng')[0].setAttribute("height", 400);
-			$('#iframeTec')[0].setAttribute("height", 400);
-			$('#iframeSci')[0].setAttribute("height", 400);
-			$('#iframeMath')[0].setAttribute("height", 400);
+			$('#iframeArt').attr("height", 400);
+			$('#iframeEng').attr("height", 400);
+			$('#iframeTec').attr("height", 400);
+			$('#iframeSci').attr("height", 400);
+			$('#iframeMath').attr("height", 400);
 			
 		}
 		else if(screen.height<800 && screen.height>=650)
 		{
-			$('#iframeArt')[0].setAttribute("height", 300);
-			$('#iframeEng')[0].setAttribute("height", 300);
-			$('#iframeTec')[0].setAttribute("height", 300);
-			$('#iframeSci')[0].setAttribute("height", 300);
-			$('#iframeMath')[0].setAttribute("height", 300);
+			$('#iframeArt').attr("height", 300);
+			$('#iframeEng').attr("height", 300);
+			$('#iframeTec').attr("height", 300);
+			$('#iframeSci').attr("height", 300);
+			$('#iframeMath').attr("height", 300);
 
 		}
 		else if(screen.height<650)
 		{
-			$('#iframeArt')[0].setAttribute("height", 200);
-			$('#iframeEng')[0].setAttribute("height", 200);
-			$('#iframeTec')[0].setAttribute("height", 200);
-			$('#iframeSci')[0].setAttribute("height", 200);
-			$('#iframeMath')[0].setAttribute("height", 200);
+			$('#iframeArt').attr("height", 200);
+			$('#iframeEng').attr("height", 200);
+			$('#iframeTec').attr("height", 200);
+			$('#iframeSci').attr("height", 200);
+			$('#iframeMath').attr("height", 200);
 
 		}
 			
