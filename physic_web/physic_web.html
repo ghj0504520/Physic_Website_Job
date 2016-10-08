@@ -60,11 +60,7 @@ Version : 1.5
 				/*if screen width is too small*/
 				
 			}
-			@media screen and (max-width:500px){
-				.modal-style{
-					width:80%;
-				}
-			}
+			
 		
 			
 			@media screen and (max-height:910px){
@@ -81,17 +77,18 @@ Version : 1.5
 				
 			}
 			@media screen and (max-height:830px){
-				/*if screen height is too small*/
+				/*Change Carousel height*/
 				.carousel {
 					max-height: 500px;
 				}
 				.carousel .item {
-					height: 500px;		/*change inner item height of the carousel*/
+					height: 500px;		
 				}
 				
 			}
+			
 			@media screen and (max-height:765px){
-				/*if screen height is too small*/
+				/*Change Carousel height*/
 				.carousel {
 					max-height: 425px;
 				}
@@ -100,7 +97,12 @@ Version : 1.5
 				}
 				
 			}
-			
+			@media screen and (max-height:730px){
+				/*Change modal height*/
+				.modal-content-style{
+					height:350px
+				}
+			}			
 			@media screen and (max-height:680px){
 				/*if screen height is too small*/
 				.carousel {
@@ -117,7 +119,17 @@ Version : 1.5
 				}
 				
 			}
-			
+			@media screen and (max-height:530px){
+				/*Change modal height*/
+				.modal-content-style{
+					height:150px
+				}
+			}
+			@media screen and (max-width:500px){
+				.modal-style{
+					width:80%;
+				}
+			}
 			
 			@media screen and (min-width:1401px){
 			
@@ -353,7 +365,7 @@ Version : 1.5
 
             <div class="modal-dialog modal-style" style="opacity:1;">
 
-                <div class="modal-content" style="background-color: #003C9D" >
+                <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
 						<h3 class="modal-title" id="myModalLabel1">Art</h3>
@@ -363,13 +375,13 @@ Version : 1.5
                         <div class="panel-group" id="accordion1" >
 
                             <div class="panel panel-default" style="border-width: 3px;">
-                                <div class="panel-heading" style="background-color:	#0088A8">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion1" href="#collapseArt1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseArt1" class="panel-collapse collapse in">
-                                    <div class="panel-body" style="background-color: #0088A8">
+                                    <div class="panel-body">
                                         <div class="table1container">
                                             <iframe id="iframeArt" width="100%" height="400px" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
@@ -379,13 +391,13 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color:	#0088A8">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion1" href="#collapseArt2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseArt2" class="panel-collapse collapse">
-                                    <div class="panel-body" style="background-color: #0088A8">
+                                    <div class="panel-body">
 										<div class="table1container"><!--pdf data-->
 											<embed src="heading_pdf/art.pdf" width="100%" class="modal-content-style"></embed>
 										</div>
@@ -414,7 +426,7 @@ Version : 1.5
 
             <div class="modal-dialog modal-style" style="opacity:1;">
 
-                <div class="modal-content" style="background-color: #687077;" >
+                <div class="modal-content">
 
                     <div class="modal-header">
 
@@ -426,13 +438,13 @@ Version : 1.5
                         <div class="panel-group" id="accordion2" >
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion2" href="#collapseEng1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseEng1" class="panel-collapse collapse in">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body">
                                         <div class="table1container">
 											<iframe id="iframeEng" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
@@ -442,15 +454,15 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion2" href="#collapseEng2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseEng2" class="panel-collapse collapse">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body">
 										<div class="table1container"><!--pdf data-->
-											<embed id="emb_eng" src="heading_pdf/engineering.pdf" width="100%" height="650px" class="modal-content-style" ></embed>
+											<embed id="emb_eng" src="heading_pdf/engineering.pdf" width="100%" class="modal-content-style" ></embed>
 										</div>
                                     </div>
                                 </div>
@@ -471,7 +483,7 @@ Version : 1.5
 
             <div class="modal-dialog modal-style" style="opacity: 1;">
 
-                <div class="modal-content" style="background-color: #687077;" >
+                <div class="modal-content">
 
                     <div class="modal-header">
 
@@ -483,13 +495,13 @@ Version : 1.5
                         <div class="panel-group" id="accordion3" >
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion3" href="#collapseTec1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseTec1" class="panel-collapse collapse in">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body">
                                         <div class="table1container">
 											<iframe id="iframeTec" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
@@ -499,15 +511,15 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion3" href="#collapseTec2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseTec2" class="panel-collapse collapse">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body">
 										<div class="table1container"><!--pdf data-->
-											<embed id="emb_tec" src="heading_pdf/technology.pdf" width="100%" height="650px" class="modal-content-style" ></embed>
+											<embed id="emb_tec" src="heading_pdf/technology.pdf" width="100%" class="modal-content-style" ></embed>
 										</div>
                                     </div>
                                 </div>
@@ -529,7 +541,7 @@ Version : 1.5
 
             <div class="modal-dialog modal-style" style="opacity: 1;">
 
-                <div class="modal-content" style="background-color: #687077;" >
+                <div class="modal-content">
 
                     <div class="modal-header">
 
@@ -541,13 +553,13 @@ Version : 1.5
                         <div class="panel-group" id="accordion4" >
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion4" href="#collapseSci1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseSci1" class="panel-collapse collapse in">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body">
                                         <div class="table1container">
 											<iframe id="iframeSci" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
@@ -557,15 +569,15 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion4" href="#collapseSci2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseSci2" class="panel-collapse collapse">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body">
 										<div class="table1container"><!--pdf data-->
-											<embed id="emb_sci" src="heading_pdf/science.pdf" width="100%" height="650px" class="modal-content-style" ></embed>
+											<embed id="emb_sci" src="heading_pdf/science.pdf" width="100%" class="modal-content-style" ></embed>
 										</div>
                                     </div>
                                 </div>
@@ -585,7 +597,7 @@ Version : 1.5
 
             <div class="modal-dialog modal-style" style="opacity: 1;">
 
-                <div class="modal-content" style="background-color: #687077;" >
+                <div class="modal-content">
 
                     <div class="modal-header">
 
@@ -597,13 +609,13 @@ Version : 1.5
                         <div class="panel-group" id="accordion5" >
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion5" href="#collapseMath1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseMath1" class="panel-collapse collapse in">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body">
                                         <div class="table1container">
 											<iframe id="iframeMath" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
@@ -613,15 +625,15 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 3px">
-                                <div class="panel-heading" style="background-color: gray">
+                                <div class="panel-heading">
                                     <h4 class="panel-title" style="color: black">
                                         <a data-toggle="collapse" data-parent="#accordion5" href="#collapseMath2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseMath2" class="panel-collapse collapse">
-                                    <div class="panel-body" style="background-color: #687077">
+                                    <div class="panel-body">
 										<div class="table1container"><!--pdf data-->
-											<embed id="emb_math" src="heading_pdf/math.pdf" width="100%" height="650px" class="modal-content-style" ></embed>
+											<embed id="emb_math" src="heading_pdf/math.pdf" width="100%" class="modal-content-style" ></embed>
 										</div>
                                     </div>
                                 </div>

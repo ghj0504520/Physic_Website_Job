@@ -49,7 +49,7 @@
 .modal-header {
     padding:9px 15px;
     border-bottom:0px;
-    background-color:#00BBFF;
+    background-color:#8C8C8C;
  }
  .modal-style{
 	width:47.5%;
@@ -57,7 +57,16 @@
 	margin-right:auto;
  }
  .modal-content-style{
-	height:650px
+	height:650px;
+ }
+ .modal-content{/*Change modal background color*/
+	background-color: #363636;
+ }
+ .panel-default > .panel-heading {
+	background-color:#636363; 
+ }
+ .panel-body{
+	background-color:#636363; 
  }
  
  
