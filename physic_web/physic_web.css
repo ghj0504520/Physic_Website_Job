@@ -1,5 +1,5 @@
 .carousel_content{/*更改投影片內容字體*/
-	
+
 	color:#b0c4de;
 	font-size:60px;
 	font-family:Arial, sans-serif;
@@ -17,8 +17,8 @@
 }
 
 .video-style{
-	
-	 width:"840px"; 
+
+	 width:"840px";
 	 height:"400px";
 }
 
@@ -27,7 +27,7 @@
 }
 .inner-html{
 	transform: scale(1.0);
-	transform-origin:0 0; 
+	transform-origin:0 0;
 	-ms-transform: scale(1.0); //ie
 	-ms-transform-origin:0 0;
 	-moz-transform: scale(1.0); //firefox
@@ -36,9 +36,9 @@
 	-o-transform-origin: 0 0;
 	-webkit-transform: scale(1.0); //chrome
 	-webkit-transform-origin: 0 0;
-	
-	
-	
+
+
+
 	background-color:;
 }
 
@@ -63,10 +63,10 @@
 	background-color: #363636;
  }
  .panel-default > .panel-heading {
-	background-color:#636363; 
+	background-color:#636363;
  }
  .panel-body{
-	background-color:#636363; 
+	background-color:#636363;
  }
- 
- 
+
+
