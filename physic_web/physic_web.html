@@ -76,7 +76,7 @@ Version : 1.5
 				}
 				
 			}
-			@media screen and (max-height:830px){
+			@media screen and (max-height:870px){
 				/*Change Carousel height*/
 				.carousel {
 					max-height: 500px;
@@ -87,7 +87,7 @@ Version : 1.5
 				
 			}
 			
-			@media screen and (max-height:765px){
+			@media screen and (max-height:800px){
 				/*Change Carousel height*/
 				.carousel {
 					max-height: 425px;
@@ -103,7 +103,7 @@ Version : 1.5
 					height:350px
 				}
 			}			
-			@media screen and (max-height:680px){
+			@media screen and (max-height:720px){
 				/*if screen height is too small*/
 				.carousel {
 					max-height:300px;
@@ -142,6 +142,19 @@ Version : 1.5
 					height: 650px;		/*change inner item height of the carousel*/
 				}
 				
+			}
+			
+			@media screen and (max-width:520px){
+				/*for nsysu.png and kejibu words*/
+				.nsysu-style{
+					width:200px;
+				}
+				.kejibu-div{
+					display:none;
+				}
+				.tophead-style{
+					font-size:20px;
+				}
 			}
         </style>
 		<script type="text/javascript">
@@ -196,9 +209,15 @@ Version : 1.5
                   </div>
             </div>
         -->
-
+		<div class="tophead-style">			
+				<img class="nsysu-style" src="nsysu.png"/>
+				&nbsp;高中物理動手學 <span style="color:#26FFFF;font-size:25px">&nbsp;「苦背三年公式，不如動手做實驗」</span>
+		</div>
+		<div class="kejibu-div">
+			本活動由科技部科普計畫補助
+		</div>
         <!-- =============================Carousel============================= -->
-        </br>
+        
 			<div id="Carousel_object" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 						<ol class="carousel-indicators" id="ol_object">	<!-- Add new index of sliders-->
