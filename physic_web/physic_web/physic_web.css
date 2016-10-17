@@ -10,16 +10,27 @@
 }
 
 .heading-text {
-	height:152px;/*與heading的長度相同*/
-	width:142px;
+	height:30px;/*與heading的長度相同*/
+	width:120px;
     text-align:center;
 	color:#b0c4de;
+	font-size: 20px;
+
+}
+
+#allBTN{
+	position: absolute;
+	top: 570px;
+}
+
+.btnDiv{
+	padding-left: 20px;
 }
 
 .video-style{
 
-	 width:"840px";
-	 height:"400px";
+	 width:840px;
+	 height:400px;
 }
 
 .inner-html-size{
@@ -39,11 +50,11 @@
 
 
 
-	background-color:;
+	/*background-color:;*/
 }
 
 .modal-title-style{
-	color:;
+	/*color:;*/
 	font-size:15px;
 }
 .modal-header {

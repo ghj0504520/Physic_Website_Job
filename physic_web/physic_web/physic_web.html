@@ -282,7 +282,7 @@ Version : 1.5
         ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
 
-        <div class="container marketing">
+        <div id="allBTN">
 
 
               <!--
@@ -290,47 +290,47 @@ Version : 1.5
               max width:1170px
               -->
 				<!--<div class="row">-->
-                    <div class=" ">
+                    <div class="btnDiv" >
 
-                            <button id="art_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalArt"><img class="img-circle " src="heading_picture/art.jpg" alt="Generic placeholder image" width="140" height="140"></button>
-                            <h2 class="heading-text">Art</h2>
+                            <button id="art_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalArt"><img class="img-circle " src="heading_picture/art.jpg" alt="Generic placeholder image" width="100" height="100"></button>
+                            <p class="heading-text">Art</p>
                     </div><!-- /.col-sm-1 -->
 
 
 
-                    <div class=" ">
+                    <div class="btnDiv">
 
-                            <button id="eng_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalEngineering"><img class="img-circle " src="heading_picture/engineering.jpg" alt="Generic placeholder image" width="140" height="140"></button>
-                            <h2 class="heading-text">Engineering</h2>
+                            <button id="eng_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalEngineering"><img class="img-circle " src="heading_picture/engineering.jpg" alt="Generic placeholder image" width="100" height="100"></button>
+                            <p class="heading-text">Engineering</p>
                     </div><!-- /.col-sm-1 -->
 
 
 
-                    <div class=" ">
+                    <div class="btnDiv">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalTechnology"><img class="img-circle " src="heading_picture/technology.jpg" alt="Generic placeholder image" width="140" height="140"></button>
-                            <h2 class="heading-text">Technology</h2>
+                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalTechnology"><img class="img-circle " src="heading_picture/technology.jpg" alt="Generic placeholder image" width="100" height="100"></button>
+                            <p class="heading-text">Technology</p>
                     </div><!-- /.col-sm-1 -->
 
 
 
-                    <div class=" ">
+                    <div class="btnDiv">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalScience"><img class="img-circle " src="heading_picture/science.jpg" alt="Generic placeholder image" width="140" height="140"></button>
-                            <h2 class="heading-text">Science</h2>
+                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalScience"><img class="img-circle " src="heading_picture/science.jpg" alt="Generic placeholder image" width="100" height="100"></button>
+                            <p class="heading-text">Science</p>
                     </div><!-- /.col-sm-1 -->
 
 
 
-                    <div class=" ">
+                    <div class="btnDiv">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalMath"><img class="img-circle " src="heading_picture/math.jpg" alt="Generic placeholder image" width="140" height="140"></button>
-                            <h2 class="heading-text">Math</h2>
+                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalMath"><img class="img-circle " src="heading_picture/math.jpg" alt="Generic placeholder image" width="100" height="100"></button>
+                            <p class="heading-text">Math</p>
                     </div><!-- /.col-sm-1 -->
 
-
+            </div>>
 				<!--</div> /.row -->
-
+            <div class="container marketing">
 
 				<!-- START THE FEATURETTES -->
 
@@ -359,6 +359,7 @@ Version : 1.5
 				</footer>
         </div><!-- /.container -->
 
+
         <!--art child window -->
 
         <div class="modal fade"  id="modalArt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -368,16 +369,16 @@ Version : 1.5
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-						<h3 class="modal-title" id="myModalLabel1">Art</h3>
+                        <h3 class="modal-title" id="myModalLabel1">Art</h3>
                     </div>
 
                     <div class="modal-body" style="padding: 0%">
                         <div class="panel-group" id="accordion1" >
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseArt1">Media</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion1" href="#collapseArt1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseArt1" class="panel-collapse collapse in">
@@ -391,16 +392,16 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapseArt2">Content</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion1" href="#collapseArt2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseArt2" class="panel-collapse collapse">
                                     <div class="panel-body">
-										<div class="table1container"><!--pdf data-->
-											<embed src="heading_pdf/art.pdf" width="100%" class="modal-content-style"></embed>
-										</div>
+                                        <div class="table1container"><!--pdf data-->
+                                            <embed src="heading_pdf/art.pdf" width="100%" class="modal-content-style"></embed>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -438,15 +439,15 @@ Version : 1.5
                         <div class="panel-group" id="accordion2" >
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapseEng1">Media</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion2" href="#collapseEng1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseEng1" class="panel-collapse collapse in">
                                     <div class="panel-body">
                                         <div class="table1container">
-											<iframe id="iframeEng" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+                                            <iframe id="iframeEng" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -454,16 +455,16 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapseEng2">Content</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion2" href="#collapseEng2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseEng2" class="panel-collapse collapse">
                                     <div class="panel-body">
-										<div class="table1container"><!--pdf data-->
-											<embed id="emb_eng" src="heading_pdf/engineering.pdf" width="100%" class="modal-content-style" ></embed>
-										</div>
+                                        <div class="table1container"><!--pdf data-->
+                                            <embed id="emb_eng" src="heading_pdf/engineering.pdf" width="100%" class="modal-content-style" ></embed>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -495,15 +496,15 @@ Version : 1.5
                         <div class="panel-group" id="accordion3" >
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapseTec1">Media</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion3" href="#collapseTec1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseTec1" class="panel-collapse collapse in">
                                     <div class="panel-body">
                                         <div class="table1container">
-											<iframe id="iframeTec" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+                                            <iframe id="iframeTec" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -511,25 +512,25 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapseTec2">Content</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion3" href="#collapseTec2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseTec2" class="panel-collapse collapse">
                                     <div class="panel-body">
-										<div class="table1container"><!--pdf data-->
-											<embed id="emb_tec" src="heading_pdf/technology.pdf" width="100%" class="modal-content-style" ></embed>
-										</div>
+                                        <div class="table1container"><!--pdf data-->
+                                            <embed id="emb_tec" src="heading_pdf/technology.pdf" width="100%" class="modal-content-style" ></embed>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
 
 
@@ -553,15 +554,15 @@ Version : 1.5
                         <div class="panel-group" id="accordion4" >
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseSci1">Media</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion4" href="#collapseSci1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseSci1" class="panel-collapse collapse in">
                                     <div class="panel-body">
                                         <div class="table1container">
-											<iframe id="iframeSci" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+                                            <iframe id="iframeSci" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -569,25 +570,25 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion4" href="#collapseSci2">Content</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion4" href="#collapseSci2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseSci2" class="panel-collapse collapse">
                                     <div class="panel-body">
-										<div class="table1container"><!--pdf data-->
-											<embed id="emb_sci" src="heading_pdf/science.pdf" width="100%" class="modal-content-style" ></embed>
-										</div>
+                                        <div class="table1container"><!--pdf data-->
+                                            <embed id="emb_sci" src="heading_pdf/science.pdf" width="100%" class="modal-content-style" ></embed>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <!--child window end -->
@@ -609,15 +610,15 @@ Version : 1.5
                         <div class="panel-group" id="accordion5" >
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion5" href="#collapseMath1">Media</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion5" href="#collapseMath1">Media</a>
                                     </h4>
                                 </div>
                                 <div id="collapseMath1" class="panel-collapse collapse in">
                                     <div class="panel-body">
                                         <div class="table1container">
-											<iframe id="iframeMath" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+                                            <iframe id="iframeMath" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -625,16 +626,16 @@ Version : 1.5
 
 
                             <div class="panel panel-default" style="border-width: 0px">
-                                <div class="panel-heading">
+                                <div class="panel-heading" style="padding-top: 3px;padding-bottom: 5px">
                                     <h4 class="panel-title" style="color: black">
-                                        <a data-toggle="collapse" data-parent="#accordion5" href="#collapseMath2">Content</a>
+                                        <a class="btn btn-md btn-info" data-toggle="collapse" data-parent="#accordion5" href="#collapseMath2">Content</a>
                                     </h4>
                                 </div>
                                 <div id="collapseMath2" class="panel-collapse collapse">
                                     <div class="panel-body">
-										<div class="table1container"><!--pdf data-->
-											<embed id="emb_math" src="heading_pdf/math.pdf" width="100%" class="modal-content-style" ></embed>
-										</div>
+                                        <div class="table1container"><!--pdf data-->
+                                            <embed id="emb_math" src="heading_pdf/math.pdf" width="100%" class="modal-content-style" ></embed>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -642,13 +643,16 @@ Version : 1.5
                     </div>
 
 
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
 
 
         <!--child window end -->
+
+
+
 
 
     </body>
