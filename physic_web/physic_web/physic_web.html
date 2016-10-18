@@ -63,37 +63,26 @@ Version : 1.5
 			
 		
 			
-			@media screen and (max-height:910px){
+			@media screen and (max-height:840px){
 				/*if screen height is too small*/
-				.carousel {
-					max-height: 575px;
-				}
-				.carousel .item {
-					height: 575px;		/*change inner item height of the carousel*/
+				.fade-in-out{
+					height:650px;
 				}
 				.modal-content-style{
 					height:450px
 				}
 				
 			}
-			@media screen and (max-height:830px){
-				/*Change Carousel height*/
-				.carousel {
-					max-height: 500px;
-				}
-				.carousel .item {
-					height: 500px;		
+			@media screen and (max-height:800px){
+				.fade-in-out{
+					height:600px;
 				}
 				
 			}
 			
-			@media screen and (max-height:765px){
-				/*Change Carousel height*/
-				.carousel {
-					max-height: 425px;
-				}
-				.carousel .item {
-					height: 425px;		/*change inner item height of the carousel*/
+			@media screen and (max-height:750px){
+				.fade-in-out{
+					height:550px;
 				}
 				
 			}
@@ -102,6 +91,12 @@ Version : 1.5
 				.modal-content-style{
 					height:350px
 				}
+			}
+			@media screen and (max-height:700px){
+				.fade-in-out{
+					height:500px;
+				}
+				
 			}			
 			@media screen and (max-height:680px){
 				/*if screen height is too small*/
@@ -119,6 +114,20 @@ Version : 1.5
 				}
 				
 			}
+			@media screen and (max-height:650px){
+				.fade-in-out{
+					height:450px;
+					width:90%;
+				}
+				
+			}
+			@media screen and (max-height:600px){
+				.fade-in-out{
+					height:400px;
+					width:90%;
+				}
+				
+			}	
 			@media screen and (max-height:530px){
 				/*Change modal height*/
 				.modal-content-style{
@@ -131,129 +140,65 @@ Version : 1.5
 				}
 			}
 			
-			@media screen and (min-width:1401px){
-			
-			}
-			@media screen and (min-height:911px){
-				.carousel {
-					max-height: 650px;
-				}
-				.carousel .item {
-					height: 650px;		/*change inner item height of the carousel*/
-				}
+			@media screen and (max-width:1260px){
+				.nsysu-style
+				{
 				
+					width:30%;
+				}
 			}
+	
+
 			
-			#crossfade > img { 
-				width: 100%;
-				height: 80%;
-				position: absolute;
-				top: 100px;
-				left: 0px;
-				color: transparent;
-				opacity: 0;
-				z-index: 0;
-				-webkit-backface-visibility: hidden;
-				-webkit-animation: imageAnimation 30s linear infinite 0s;
-				-moz-animation: imageAnimation 30s linear infinite 0s;
-				-o-animation: imageAnimation 30s linear infinite 0s;
-				-ms-animation: imageAnimation 30s linear infinite 0s;
-				animation: imageAnimation 30s linear infinite 0s; 
-			}
-			#crossfade > img:nth-child(1)  { 
-				background-image: url(carousel_picture/art.jpg);
-				-webkit-animation-delay: 6s;
-				-moz-animation-delay: 6s;
-				-o-animation-delay: 6s;
-				-ms-animation-delay: 6s;
-				animation-delay: 6s; 
-			}
-			#crossfade > img:nth-child(2) { 
-				background-image: url(carousel_picture/technology.jpg);
-				-webkit-animation-delay: 12s;
-				-moz-animation-delay: 12s;
-				-o-animation-delay: 12s;
-				-ms-animation-delay: 12s;
-				animation-delay: 12s; 
-			}
-			#crossfade > img:nth-child(3) { 
-				background-image: url(carousel_picture/engineering.jpg);
-				-webkit-animation-delay: 18s;
-				-moz-animation-delay: 18s;
-				-o-animation-delay: 18s;
-				-ms-animation-delay: 18s;
-				animation-delay: 18s; 
-			}
-			#crossfade > img:nth-child(4) { 
-				background-image: url(carousel_picture/science.jpg);
-				-webkit-animation-delay: 24s;
-				-moz-animation-delay: 24s;
-				-o-animation-delay: 24s;
-				-ms-animation-delay: 24s;
-				animation-delay: 24s; 
-			}
-			#crossfade > img:nth-child(5) { 
-				background-image: url(carousel_picture/math.jpg);
-				-webkit-animation-delay: 30s;
-				-moz-animation-delay: 30s;
-				-o-animation-delay: 30s;
-				-ms-animation-delay: 30s;
-				animation-delay: 30s; 
-			}
-
-		@-webkit-keyframes imageAnimation { 
-			0% { opacity: 0;
-			-webkit-animation-timing-function: ease-in; }
-			8% { opacity: 1;
-				 -webkit-animation-timing-function: ease-out; }
-			17% { opacity: 1 }
-			25% { opacity: 0 }
-			100% { opacity: 0 }
-		}
-
-		@-moz-keyframes imageAnimation { 
-			0% { opacity: 0;
-			-moz-animation-timing-function: ease-in; }
-			8% { opacity: 1;
-				 -moz-animation-timing-function: ease-out; }
-			17% { opacity: 1 }
-			25% { opacity: 0 }
-			100% { opacity: 0 }
-		}
-
-		@-o-keyframes imageAnimation { 
-			0% { opacity: 0;
-			-o-animation-timing-function: ease-in; }
-			8% { opacity: 1;
-				 -o-animation-timing-function: ease-out; }
-			17% { opacity: 1 }
-			25% { opacity: 0 }
-			100% { opacity: 0 }
-		}
-
-		@-ms-keyframes imageAnimation { 
-			0% { opacity: 0;
-			-ms-animation-timing-function: ease-in; }
-			8% { opacity: 1;
-				 -ms-animation-timing-function: ease-out; }
-			17% { opacity: 1 }
-			25% { opacity: 0 }
-			100% { opacity: 0 }
-		}
-
-		@keyframes imageAnimation { 
-			0% { opacity: 0;
-			animation-timing-function: ease-in; }
-			8% { opacity: 1;
-				 animation-timing-function: ease-out; }
-			17% { opacity: 1 }
-			25% { opacity: 0 }
-			100% { opacity: 0 }
-		}
-
         </style>
 		<script type="text/javascript">
+			var i = 0.05;
+			var record;
+			var total = 0;
+			var times = 0;
+			var count = 0;
+			var sliders = 4;/*Number of Sliders */
+			var heading_pic = ["art","technology","engineering","science","math"];
+			var wait = 0;
+
+			var intervalId = window.setInterval(function(){
 			
+				if(total<0.05 || total>0.95)
+				{	
+					if(times%2==0)
+					{
+						//alert("zz");
+						/*reset*/
+						i = 0.05;
+						total = 0;
+						
+						$("#img").attr('src',"carousel_picture/"+heading_pic[count]+".jpg");
+						$("#img").css("opacity",0);
+						//clearInterval(intervalId);
+						count++;
+						if(count>sliders)
+							count = 0;
+						if(times==2)
+							times = 0;
+						times++;
+					}
+					else if(times==1)
+					{
+						wait+=1;
+						i = 0;
+						if(wait>150)
+						{
+							times++;
+							wait = 0;
+							i = -0.05;
+						}
+							
+					}					
+				}
+				total += i;		
+				$("#img").css("opacity",total);
+					
+			},30);/*25 milisecond +or- 0.01*/
 			
 		</script>
     </head>
@@ -262,6 +207,16 @@ Version : 1.5
 
 
     <body>
+		<div class="tophead-style">			
+				<img class="nsysu-style" src="nsysu.png"/>
+				<div style="text-align: center;">高中物理動手學</div>
+				<div style="text-align: center;">
+					<span style="color:#26FFFF;font-size:25px">「苦背三年公式，不如動手做實驗」</span>
+				</div>
+				<div style="font-size:20px;text-align: center;color:yellow;">
+					本活動由科技部科普計畫補助
+				</div>
+		</div>
         <!--
             <div class="navbar-wrapper">
                   <div class="container">
@@ -304,20 +259,12 @@ Version : 1.5
         -->
 
         <!-- =============================Carousel============================= -->
-        </br>
-
-		<div id= "crossfade">
-		  <img src="carousel_picture/art.jpg" />
-		  <img src="carousel_picture/technology.jpg" />
-		  <img src="carousel_picture/engineering.jpg" />
-		  <img src="carousel_picture/science.jpg" />
-		  <img src="carousel_picture/math.jpg" />
-		</div>
-		<div style="height:1000px">
+		<div class="fade-in-out">
+			<img id="img" style="height:100%;width:100%"/>
 		</div>
         <!-- =============================Carousel============================= -->
-
-
+		
+		
         <!-- Marketing messaging and featurettes
         ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -368,15 +315,14 @@ Version : 1.5
                             <p class="heading-text">Math</p>
                     </div><!-- /.col-sm-1 -->
 
-            </div>>
-				<!--</div> /.row -->
+            </div>
             <div class="container marketing">
 
 				<!-- START THE FEATURETTES -->
 
 				<!--<hr class="featurette-divider">-->
 			  
-				<!--下方的資料-->
+				<!--下方的資料
 				<div class="inner-html">
 					<embed src="html/demo.htm" class="inner-html-size" style="height:2400px"></embed>
 					
@@ -387,7 +333,10 @@ Version : 1.5
 				<div class="inner-html">
 					<embed src="html/material.htm" class="inner-html-size" style="height:1400px"/>
 				</div>
-
+				-->
+				<embed src="html/part1.htm" class="inner-html-size" style="height:3500px;"></embed>
+				<hr class="featurette-divider">
+				<embed src="html/part2.htm" class="inner-html-size" style="height:3500px"/>
 				<!--<hr class="featurette-divider">-->
 
 				<!-- /END THE FEATURETTES -->
@@ -397,7 +346,7 @@ Version : 1.5
 				<footer>
                     <p>&copy; 2016 Physics Web &middot;</p>
 				</footer>
-        </div><!-- /.container -->
+			</div>
 
 
         <!--art child window -->
