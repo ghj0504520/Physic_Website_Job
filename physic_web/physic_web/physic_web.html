@@ -117,14 +117,14 @@ Version : 1.5
 			@media screen and (max-height:650px){
 				.fade-in-out{
 					height:450px;
-					width:90%;
+					//width:90%;
 				}
 				
 			}
 			@media screen and (max-height:600px){
 				.fade-in-out{
 					height:400px;
-					width:90%;
+					//width:90%;
 				}
 				
 			}	
@@ -198,7 +198,7 @@ Version : 1.5
 				total += i;		
 				$("#img").css("opacity",total);
 					
-			},30);/*25 milisecond +or- 0.01*/
+			},30);/*30 milisecond +or- 0.05 for opacity*/
 			
 		</script>
     </head>
@@ -260,7 +260,7 @@ Version : 1.5
 
         <!-- =============================Carousel============================= -->
 		<div class="fade-in-out">
-			<img id="img" style="height:100%;width:100%"/>
+			<img id="img" class="heading-img"/>
 		</div>
         <!-- =============================Carousel============================= -->
 		
