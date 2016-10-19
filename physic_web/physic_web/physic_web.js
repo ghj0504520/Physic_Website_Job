@@ -219,7 +219,7 @@ var elementMove=function () {
 				// 還原座標系統為 absolute
 				$allBTN.css({
 					position: 'absolute',
-					top:800
+					top:'100%'
 				});
 			}
 		});
