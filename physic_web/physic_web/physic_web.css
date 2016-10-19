@@ -140,7 +140,8 @@
 }
 
 .inner-html-size{
-	width:100%;
+	width:90%;
+	margin-left:100px;
 }
 .inner-html{
 	transform: scale(1.0);
@@ -197,7 +198,7 @@
 	font-size:35px;
 	font-family: DFKai-sb;
 }
- .fade-in-out{
+.fade-in-out{
 	 
 	 height:700px;
 	 width:100%;
@@ -205,5 +206,12 @@
 	 margin-right:auto;
 	 margin-bottom:6%;
  }
+.heading-img{
+	
+	height:100%;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
 
 
