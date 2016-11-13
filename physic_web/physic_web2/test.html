@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="favicon.ico">
+
+        <title>Physic_Web</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+		
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!-- carousel 箭頭消失-->
+	    <!-- jquery-->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <!-- bootstrap js-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    <!-- physic_web自訂的css-->
+	    <link href="physic_web.css" rel="stylesheet">
+	
+	    <link href="less.css" rel="stylesheet">
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <script src="ie-emulation-modes-warning.js"></script>
+		
+		<!-- physic_web.js-->
+		<script src="physic_web.js"></script>
+		<style type="text/css">
+		    body{
+			    background-color:#444444;
+		    }
+			.aa{
+				height:100%;
+				width:100%;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				var art_html = 500;
+				var eng_html = 700;
+				var tec_html = 1500;
+				var sci_html = 2000;
+				var math_html = 2500;
+				/*$("#obj").width($("#cont").width());
+				$("#obj").height($("#cont").height());*/
+				$("#inner-html").height(math_html+"px");
+
+			});
+		</script>
+	</head>
+		
+	
+	<body>
+		<div class="tophead-style">			
+				<img class="nsysu-style" src="nsysu.png"/>
+				<div style="text-align: center;">高中物理動手學</div>
+				<div style="text-align: center;">
+					<span style="color:#26FFFF;font-size:25px">「苦背三年公式，不如動手做實驗」</span>
+				</div>
+				<div style="font-size:20px;text-align: center;color:yellow;">
+					本活動由科技部科普計畫補助
+				</div>
+		</div>
+		<br>
+
+		<div align="center">
+			<iframe width="60%" height="700" src="https://www.youtube.com/embed/BCkHnvDGWOY" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<br>
+		<br>
+		<div style="margin-top:100px" class="container marketing">
+			<div class="inner-html-size">
+				<object id="inner-html" width="100%" height="" data="html/math.htm"></object>
+			<div>
+		</div>
+	</body>
+
+		
+
+	
+	
+
+</html>
