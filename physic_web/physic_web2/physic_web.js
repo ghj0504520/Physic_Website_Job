@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
 	/*======================================================================*/
@@ -11,7 +12,7 @@ $(document).ready(function() {
 	var videoEng=videoENG+"?enablejsapi=1";
 	/*改變technology的網址*/
 	var videoTEC="";
-	var  videoTec=videoTEC+"?enablejsapi=1";
+	var videoTec=videoTEC+"?enablejsapi=1";
 	/*改變science的網址*/
 	var videoSCI="";
 	var videoSci=videoSCI+"?enablejsapi=1";
@@ -19,9 +20,27 @@ $(document).ready(function() {
 	var videoMATH="";
 	var videoMath=videoMATH+"?enablejsapi=1";
 
-
+	var path = "html/";
+	/*
+	var art_html = "art.htm";
+	var eng_html = "engineering.htm";
+	var tec_html = "technology.htm";
+	var sci_html = "science.htm";
+	var math_html = "math.htm";
+	*/
+	
+	/*設定底下的html長度*/
+	var art_html_height = 500;
+	var eng_html_height = 700;
+	var tec_html_height = 1500;
+	var sci_html_height = 2000;
+	var math_html_height = 2500;
+	var oth_html_height = 4000;
+	
 	/*======================================================================*/
-
+	
+	
+	
 
 	/*改變下方資料背景顏色*/
 	$('.inner-html').css("background-color", "white");
@@ -30,10 +49,155 @@ $(document).ready(function() {
 	/*=======================================================================*/
 	/*video function*/
 	$('#totalVideo').attr('src', videoEng + "&autoplay=1");
-	videoMove();
+	//videoMove();
+	/*=======================================================================*/
+	/*Button function*/
+	
+	/*function reload_html(html,height){
+		var parent = $('#inner-html').parent();
+		var newElement = "<embed src='html/"+htm+"' id"+"='inner-html'>";
+	
+		$('#inner-html').remove();
+		parent.append(newElement);
+		
+		$("#inner-html").attr("height",height);
+		$("#inner-html").attr("width","100%");
+		
+	}
+	$("#art_btn").click(reload_html('art.htm',art_html_height));*/
+	
+	
+	
+	$("#m_art_btn").click(function(){
 
+		window.location.href = "test.html";
+		
+		
+		
+	});
+	
 
-
+	
+	$("#art_btn").click(function(){
+		
+		var parent2 = $('#totalVideo').parent();
+		var newframe = "<iframe id='totalVideo' src='https://www.youtube.com/embed/BCkHnvDGWOY' frameborder=0 allowfullscreen></iframe>";
+		$('#totalVideo').remove();
+		parent2.append(newframe);
+		$("#totalVideo").attr("height","600");
+		$("#totalVideo").attr("width","60%");
+		
+		
+		
+		var parent = $('#inner-html').parent();
+		var newemb = "<embed src='html/art.htm' id='inner-html'>";
+		$('#inner-html').remove();
+		parent.append(newemb);
+		$("#inner-html").attr("height",art_html_height);
+		$("#inner-html").attr("width","100%"); 
+		
+		
+		alert("zz");
+		
+		
+		
+	});
+	$("#eng_btn").click(function(){
+		
+		var parent2 = $('#totalVideo').parent();
+		var newframe = "<iframe id='totalVideo' src='https://www.youtube.com/embed/II1g92jFItE' frameborder=0 allowfullscreen></iframe>";
+		$('#totalVideo').remove();
+		parent2.append(newframe);
+		$("#totalVideo").attr("height","600");
+		$("#totalVideo").attr("width","60%");
+		
+		
+		var parent = $('#inner-html').parent();
+		var newElement = "<embed src='html/engineering.htm' id='inner-html'>";
+	
+		$('#inner-html').remove();
+		parent.append(newElement);
+		
+		$("#inner-html").attr("height",eng_html_height);
+		$("#inner-html").attr("width","100%");
+	});
+	$("#tec_btn").click(function(){
+		
+		var parent2 = $('#totalVideo').parent();
+		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
+		$('#totalVideo').remove();
+		parent2.append(newframe);
+		$("#totalVideo").attr("height","0");
+		$("#totalVideo").attr("width","0");
+		
+		
+		
+		var parent = $('#inner-html').parent();
+		var newElement = "<embed src='html/technology.htm' id='inner-html'>";
+	
+		$('#inner-html').remove();
+		parent.append(newElement);
+		
+		$("#inner-html").attr("height",tec_html_height);
+		$("#inner-html").attr("width","100%");
+	});
+	$("#sci_btn").click(function(){
+		
+		var parent2 = $('#totalVideo').parent();
+		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
+		$('#totalVideo').remove();
+		parent2.append(newframe);
+		$("#totalVideo").attr("height","0");
+		$("#totalVideo").attr("width","0");
+		
+		var parent = $('#inner-html').parent();
+		var newElement = "<embed src='html/science.htm' id='inner-html'>";
+	
+		$('#inner-html').remove();
+		parent.append(newElement);
+		
+		$("#inner-html").attr("height",sci_html_height);
+		$("#inner-html").attr("width","100%");
+	});
+	$("#math_btn").click(function(){
+		
+		var parent2 = $('#totalVideo').parent();
+		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
+		$('#totalVideo').remove();
+		parent2.append(newframe);
+		$("#totalVideo").attr("height","0");
+		$("#totalVideo").attr("width","0");
+		
+		var parent = $('#inner-html').parent();
+		var newElement = "<embed src='html/math.htm' id='inner-html'>";
+	
+		$('#inner-html').remove();
+		parent.append(newElement);
+		
+		$("#inner-html").attr("height",math_html_height);
+		$("#inner-html").attr("width","100%");
+	});
+	$("#oth_btn").click(function(){
+		
+		
+		var parent2 = $('#totalVideo').parent();
+		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
+		$('#totalVideo').remove();
+		parent2.append(newframe);
+		$("#totalVideo").attr("height","0");
+		$("#totalVideo").attr("width","0");
+		
+		var parent = $('#inner-html').parent();
+		var newElement = "<embed src='html/other.htm' id='inner-html'>";
+	
+		$('#inner-html').remove();
+		parent.append(newElement);
+		
+		$("#inner-html").attr("height",oth_html_height);
+		$("#inner-html").attr("width","100%");
+	});
+	/*=======================================================================*/
+	
 
 	/*Screen resize============================================*/
 	$(window).resize(function() {
@@ -72,43 +236,46 @@ $(document).ready(function() {
 });
 
 var videoMove=function () {
-	// 取得其 top 值
-	var $totalVideo= $('#totalVideo'),
-		_top = $totalVideo.offset().top;
+	if(document.getElementById('#totalVideo')) {
+		// 取得其 top 值
+		var $totalVideo = $('#totalVideo'),
+			_top = $totalVideo.offset().top;
 
-	// 當網頁捲軸捲動時
-	var $win = $(window).scroll(function(){
-		// 如果現在的 scrollTop 大於原本的 top+300 時
-		if($win.scrollTop() >= _top+300){
-			$('#totalVideo')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-		}
-	});
+		// 當網頁捲軸捲動時
+		var $win = $(window).scroll(function () {
+			// 如果現在的 scrollTop 大於原本的 top+300 時
+			if ($win.scrollTop() >= _top + 300) {
+				$('#totalVideo')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+			}
+		});
+	}
 }
 
 var elementMove=function () {
+	if(document.getElementById('#allBTN')) {
+		// 取得其 top 值
+		var $allBTN = $('#allBTN'),
+			_top = $allBTN.offset().top;
 
-	// 取得其 top 值
-	var $allBTN= $('#allBTN'),
-		_top = $allBTN.offset().top;
-
-	// 當網頁捲軸捲動時
-	var $win = $(window).scroll(function(){
-		// 如果現在的 scrollTop 大於原本的 top 時
-		if($win.scrollTop() >= _top){
-			// 如果座標系統不是 fixed 的話
-			if($allBTN.css('position')!='fixed'){
-				// 設定座標系統為 fixed
+		// 當網頁捲軸捲動時
+		var $win = $(window).scroll(function () {
+			// 如果現在的 scrollTop 大於原本的 top 時
+			if ($win.scrollTop() >= _top) {
+				// 如果座標系統不是 fixed 的話
+				if ($allBTN.css('position') != 'fixed') {
+					// 設定座標系統為 fixed
+					$allBTN.css({
+						position: 'fixed',
+						top: 15
+					});
+				}
+			} else {
+				// 還原座標系統為 absolute
 				$allBTN.css({
-					position: 'fixed',
-					top:15
+					position: 'absolute',
+					top: '15%'
 				});
 			}
-		}else{
-			// 還原座標系統為 absolute
-			$allBTN.css({
-				position: 'absolute',
-				top:'15%'
-			});
-		}
-	});
+		});
+	}
 }
