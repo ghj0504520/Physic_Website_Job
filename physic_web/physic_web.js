@@ -34,14 +34,14 @@ $(document).ready(function() {
 	if(videoArt!="?enablejsapi=1")
 	{
  		$("#collapseArt1").on("show.bs.collapse", function () {
-  
+
  		$('#iframeArt')[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
  		});
-  
+
  		$("#collapseArt1").on("hide.bs.collapse", function () {
  			$('#iframeArt')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
  		});
-  
+
  		$("#modalArt").on('show.bs.modal', function () {
  			$('#iframeArt').attr('src', videoArt + "&autoplay=1");
  		});

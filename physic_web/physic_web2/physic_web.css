@@ -15,8 +15,8 @@
 
 .video-style{
 
-	 width:"840px";
-	 height:"400px";
+	 width:840px;
+	 height:400px;
 }
 
 .inner-html-size{
@@ -38,7 +38,6 @@
 }
 
 .modal-title-style{
-	color:;
 	font-size:15px;
 }
 .modal-header {
@@ -83,4 +82,12 @@
 	font-size:20px;
 }
 
-
+#allBTN{
+	position: absolute;
+	top: 15%;
+	height:20px;/*與heading的長度相同*/
+	width:120px;
+	text-align:center;
+	color:#b0c4de;
+	font-size: 15px;
+}
