@@ -48,7 +48,7 @@ $(document).ready(function() {
 
 	/*=======================================================================*/
 	/*video function*/
-	$('#totalVideo').attr('src', videoEng + "&autoplay=1");
+	//$('#totalVideo').attr('src', videoEng + "&autoplay=1");
 	//videoMove();
 	/*=======================================================================*/
 	/*Button function*/
@@ -71,21 +71,32 @@ $(document).ready(function() {
 	$("#m_art_btn").click(function(){
 
 		window.location.href = "test.html";
+		//alert("zz");
 		
 		
-		
+		var parent = document.getElementById("inner-html").parent();
+		//var parent = $('#inner-html').parent();
+		var newemb = "<embed src='html/art.htm' id='inner-html'>";
+		$('#inner-html').remove();
+		parent.append(newemb);
+		$("#inner-html").attr("height",art_html_height);
+		$("#inner-html").attr("width","100%"); 
+			
+
 	});
 	
-
+	//videoMove();
 	
 	$("#art_btn").click(function(){
 		
 		var parent2 = $('#totalVideo').parent();
-		var newframe = "<iframe id='totalVideo' src='https://www.youtube.com/embed/BCkHnvDGWOY' frameborder=0 allowfullscreen></iframe>";
+		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
+		
 		$('#totalVideo').remove();
 		parent2.append(newframe);
 		$("#totalVideo").attr("height","600");
 		$("#totalVideo").attr("width","60%");
+		$('#totalVideo').attr('src', videoArt + "&autoplay=1");
 		
 		
 		
@@ -95,9 +106,6 @@ $(document).ready(function() {
 		parent.append(newemb);
 		$("#inner-html").attr("height",art_html_height);
 		$("#inner-html").attr("width","100%"); 
-		
-		
-		alert("zz");
 		
 		
 		
@@ -110,6 +118,8 @@ $(document).ready(function() {
 		parent2.append(newframe);
 		$("#totalVideo").attr("height","600");
 		$("#totalVideo").attr("width","60%");
+		$('#totalVideo').attr('src', videoEng + "&autoplay=1");
+	
 		
 		
 		var parent = $('#inner-html').parent();
@@ -231,51 +241,7 @@ $(document).ready(function() {
 		}
 
 	});
-
-	elementMove();
+	
+	
+	//elementMove();
 });
-
-var videoMove=function () {
-	if(document.getElementById('#totalVideo')) {
-		// 取得其 top 值
-		var $totalVideo = $('#totalVideo'),
-			_top = $totalVideo.offset().top;
-
-		// 當網頁捲軸捲動時
-		var $win = $(window).scroll(function () {
-			// 如果現在的 scrollTop 大於原本的 top+300 時
-			if ($win.scrollTop() >= _top + 300) {
-				$('#totalVideo')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-			}
-		});
-	}
-}
-
-var elementMove=function () {
-	if(document.getElementById('#allBTN')) {
-		// 取得其 top 值
-		var $allBTN = $('#allBTN'),
-			_top = $allBTN.offset().top;
-
-		// 當網頁捲軸捲動時
-		var $win = $(window).scroll(function () {
-			// 如果現在的 scrollTop 大於原本的 top 時
-			if ($win.scrollTop() >= _top) {
-				// 如果座標系統不是 fixed 的話
-				if ($allBTN.css('position') != 'fixed') {
-					// 設定座標系統為 fixed
-					$allBTN.css({
-						position: 'fixed',
-						top: 15
-					});
-				}
-			} else {
-				// 還原座標系統為 absolute
-				$allBTN.css({
-					position: 'absolute',
-					top: '15%'
-				});
-			}
-		});
-	}
-}
