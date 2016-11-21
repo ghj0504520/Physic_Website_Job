@@ -7,7 +7,7 @@ var videoMove=function () {
 		// 取得其 top 值
 		var $totalVideo = $('#totalVideo'),
 			_top = $totalVideo.offset().top;
-alert("hgj");
+
 		// 當網頁捲軸捲動時
 		var $win = $(window).scroll(function () {
 			
