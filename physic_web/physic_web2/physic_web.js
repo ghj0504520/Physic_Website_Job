@@ -19,6 +19,9 @@ $(document).ready(function() {
 	/*改變math的網址*/
 	var videoMATH="";
 	var videoMath=videoMATH+"?enablejsapi=1";
+	/*改變other的網址*/
+	var videoOTHER="";
+	var videoOther=videoOther+"?enablejsapi=1";
 
 	var path = "html/";
 	/*
@@ -30,12 +33,13 @@ $(document).ready(function() {
 	*/
 	
 	/*設定底下的html長度*/
-	var art_html_height = 500;
-	var eng_html_height = 700;
-	var tec_html_height = 1500;
-	var sci_html_height = 2000;
-	var math_html_height = 2500;
-	var oth_html_height = 4000;
+	/*長度大小:不要讓內部的html有右邊的拉把(bar)即可*/
+	var art_html_height = 700; 
+	var eng_html_height = 900;
+	var tec_html_height = 1900;
+	var sci_html_height = 2500;
+	var math_html_height = 2700;
+	var oth_html_height = 7000;
 	
 	/*======================================================================*/
 	
@@ -68,7 +72,7 @@ $(document).ready(function() {
 	
 	
 	
-	$("#m_art_btn").click(function(){
+	/*$("#m_art_btn").click(function(){
 
 		window.location.href = "test.html";
 		//alert("zz");
@@ -83,7 +87,7 @@ $(document).ready(function() {
 		$("#inner-html").attr("width","100%"); 
 			
 
-	});
+	});*/
 	
 	//videoMove();
 	
@@ -93,99 +97,124 @@ $(document).ready(function() {
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
 		
 		$('#totalVideo').remove();
-		parent2.append(newframe);
-		$("#totalVideo").attr("height","600");
-		$("#totalVideo").attr("width","60%");
-		$('#totalVideo').attr('src', videoArt + "&autoplay=1");
-		
+		if(videoART!="")
+		{
+			parent2.append(newframe);
+			/*$("#totalVideo").attr("height","600");
+			$("#totalVideo").attr("width","60%");*/
+			$("#totalVideo").addClass("video-style");
+			$('#totalVideo').attr('src', videoArt + "&autoplay=1");
+		}
 		
 		
 		var parent = $('#inner-html').parent();
-		var newemb = "<embed src='html/art.htm' id='inner-html'>";
+		var newemb = "<embed src='data/art.htm' id='inner-html'>";
 		$('#inner-html').remove();
 		parent.append(newemb);
 		$("#inner-html").attr("height",art_html_height);
-		$("#inner-html").attr("width","100%"); 
+		$("#inner-html").addClass("inner-html"); 
 		
 		
 		
 	});
+		
+	
 	$("#eng_btn").click(function(){
 		
 		var parent2 = $('#totalVideo').parent();
-		var newframe = "<iframe id='totalVideo' src='https://www.youtube.com/embed/II1g92jFItE' frameborder=0 allowfullscreen></iframe>";
+		var newframe = "<iframe id='totalVideo' frameborder=0 allowfullscreen></iframe>";
 		$('#totalVideo').remove();
-		parent2.append(newframe);
-		$("#totalVideo").attr("height","600");
-		$("#totalVideo").attr("width","60%");
-		$('#totalVideo').attr('src', videoEng + "&autoplay=1");
+		
+		if(videoENG!="")
+		{
+			parent2.append(newframe);
+			/*$("#totalVideo").attr("height","600");
+			$("#totalVideo").attr("width","60%");*/
+			$("#totalVideo").addClass("video-style");
+			$('#totalVideo').attr('src', videoEng + "&autoplay=1");
 	
-		
-		
+		}
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='html/engineering.htm' id='inner-html'>";
+		var newElement = "<embed src='data/engineering.htm' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
 		
 		$("#inner-html").attr("height",eng_html_height);
-		$("#inner-html").attr("width","100%");
+		$("#inner-html").addClass("inner-html"); 
 	});
 	$("#tec_btn").click(function(){
 		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
 		$('#totalVideo').remove();
-		parent2.append(newframe);
-		$("#totalVideo").attr("height","0");
-		$("#totalVideo").attr("width","0");
+		if(videoTEC!="")
+		{
+			parent2.append(newframe);
+			$("#totalVideo").addClass("video-style");
+			$('#totalVideo').attr('src', videoTec + "&autoplay=1");
+		}
 		
+		/*$("#totalVideo").attr("height","0");
+		$("#totalVideo").attr("width","0");*/
 		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='html/technology.htm' id='inner-html'>";
+		var newElement = "<embed src='data/technology.htm' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
 		
 		$("#inner-html").attr("height",tec_html_height);
-		$("#inner-html").attr("width","100%");
+		$("#inner-html").addClass("inner-html"); 
 	});
 	$("#sci_btn").click(function(){
 		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
 		$('#totalVideo').remove();
-		parent2.append(newframe);
-		$("#totalVideo").attr("height","0");
-		$("#totalVideo").attr("width","0");
+		
+		if(videoSCI!="")
+		{
+			parent2.append(newframe);
+			$("#totalVideo").addClass("video-style");
+			$('#totalVideo').attr('src', videoSci + "&autoplay=1");
+		}
+		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='html/science.htm' id='inner-html'>";
+		var newElement = "<embed src='data/science.htm' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
 		
 		$("#inner-html").attr("height",sci_html_height);
-		$("#inner-html").attr("width","100%");
+		$("#inner-html").addClass("inner-html"); 
 	});
 	$("#math_btn").click(function(){
 		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
 		$('#totalVideo').remove();
-		parent2.append(newframe);
-		$("#totalVideo").attr("height","0");
-		$("#totalVideo").attr("width","0");
+		
+		if(videoMATH!="")
+		{
+			parent2.append(newframe);
+
+			$("#totalVideo").addClass("video-style");
+			$('#totalVideo').attr('src', videoMath + "&autoplay=1");
+		}
+		
+		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='html/math.htm' id='inner-html'>";
+		var newElement = "<embed src='data/math.htm' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
 		
 		$("#inner-html").attr("height",math_html_height);
-		$("#inner-html").attr("width","100%");
+		$("#inner-html").addClass("inner-html"); 
 	});
 	$("#oth_btn").click(function(){
 		
@@ -193,24 +222,30 @@ $(document).ready(function() {
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
 		$('#totalVideo').remove();
-		parent2.append(newframe);
-		$("#totalVideo").attr("height","0");
-		$("#totalVideo").attr("width","0");
+		
+		if(videoOTHER!="")
+		{
+			parent2.append(newframe);
+		
+			$("#totalVideo").addClass("video-style");
+			$('#totalVideo').attr('src', videoOther + "&autoplay=1");
+		}
+		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='html/other.htm' id='inner-html'>";
+		var newElement = "<embed src='data/other.htm' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
 		
 		$("#inner-html").attr("height",oth_html_height);
-		$("#inner-html").attr("width","100%");
+		$("#inner-html").addClass("inner-html"); 
 	});
 	/*=======================================================================*/
 	
 
 	/*Screen resize============================================*/
-	$(window).resize(function() {
+	/*$(window).resize(function() {
 
 		if(screen.height>=800)
 		{
@@ -240,7 +275,7 @@ $(document).ready(function() {
 
 		}
 
-	});
+	});*/
 	
 	
 	//elementMove();

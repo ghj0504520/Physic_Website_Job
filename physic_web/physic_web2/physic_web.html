@@ -71,9 +71,6 @@ Version : 1.5
 				.carousel .item {
 					height: 575px;		/*change inner item height of the carousel*/
 				}
-				.modal-content-style{
-					height:450px
-				}
 				
 			}
 			@media screen and (max-height:870px){
@@ -95,27 +92,25 @@ Version : 1.5
 				.carousel .item {
 					height: 425px;		/*change inner item height of the carousel*/
 				}
+				.img-circle{
+					height:120px;
+					width:120px;
+				}
+				.heading-text{
+					font-size:22px;
+				}
 				
 			}
-			@media screen and (max-height:730px){
-				/*Change modal height*/
-				.modal-content-style{
-					height:350px
-				}
-			}			
 			@media screen and (max-height:720px){
 				/*if screen height is too small*/
 				.carousel {
-					max-height:300px;
+					max-height:350px;
 				}
 				.carousel .item {
-					height: 300px;		/*change inner item height of the carousel*/
+					height: 350px;		/*change inner item height of the carousel*/
 				}
 				.carousel_content{/*更改投影片內容字體*/
-					font-size:20px;
-				}
-				.modal-content-style{
-					height:250px
+					font-size:22px;
 				}
 				
 			}
@@ -131,9 +126,19 @@ Version : 1.5
 				}
 			}
 			
-			@media screen and (min-width:1401px){
-			
+			@media screen and (max-width:1140px){
+				.main-nsysu{
+					width:300px;
+				}
+				.tophead-style{
+					font-size:25px;
+					margin-left:10%;
+				}
+				.kejibu-div{
+					font-size:15px;
+				}
 			}
+			
 			@media screen and (min-height:911px){
 				.carousel {
 					max-height: 650px;
@@ -144,9 +149,9 @@ Version : 1.5
 				
 			}
 			
-			@media screen and (max-width:520px){
+			@media screen and (max-width:550px){
 				/*for nsysu.png and kejibu words*/
-				.nsysu-style{
+				.main-nsysu{
 					width:200px;
 				}
 				.kejibu-div{
@@ -210,9 +215,10 @@ Version : 1.5
             </div>
         -->
 		
-		<div class="tophead-style">			
-			<img src="nsysu.png"/>
-			<span style="display:inline-block;vertical-align:middle;font-family:Microsoft JhengHei;color:#ffffff;font-weight:bold;font-size:35px;text-shadow:5px 5px 5px #000000;margin-left:20%">高中物理動手學</span>
+		<div>			
+			<img class="main-nsysu" src="nsysu.png"/>
+			<span class="tophead-style">高中物理動手學</span>
+			<span></span>
 		</div>
 		<div class="kejibu-div">
 			本活動由科技部科普計畫補助
@@ -362,9 +368,9 @@ Version : 1.5
               max width:1170px
               -->
 				<div class="row">
-                    <div class="col-sm-1 col-sm-offset-1">
+                    <div class="col-sm-1">
 
-                            <button id="m_art_btn" type="button" style="background-color: inherit;border: none"><img class="img-circle " src="heading_picture/art.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button id="art_btn" type="button" style="background-color: inherit;border: none"><a href="html/art_html.html"><img class="img-circle" src="heading_picture/art.jpg" alt="Generic placeholder image" ></button>
                             <h2 class="heading-text">Art</h2>
                     </div><!-- /.col-sm-1 -->
 
@@ -372,7 +378,7 @@ Version : 1.5
 
                     <div class="col-sm-1 col-sm-offset-1">
 
-                            <button id="eng_btn" type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalEngineering"><img class="img-circle " src="heading_picture/engineering.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button id="eng_btn" type="button" style="background-color: inherit;border: none"><a href="html/eng_html.html"><img class="img-circle " src="heading_picture/engineering.jpg" alt="Generic placeholder image"></button>
                             <h2 class="heading-text">Engineering</h2>
                     </div><!-- /.col-sm-1 -->
 
@@ -380,7 +386,7 @@ Version : 1.5
 
                     <div class="col-sm-1 col-sm-offset-1">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalTechnology"><img class="img-circle " src="heading_picture/technology.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button type="button" style="background-color: inherit;border: none"><a href="html/tec_html.html"><img class="img-circle " src="heading_picture/technology.jpg" alt="Generic placeholder image"></button>
                             <h2 class="heading-text">Technology</h2>
                     </div><!-- /.col-sm-1 -->
 
@@ -388,7 +394,7 @@ Version : 1.5
 
                     <div class="col-sm-1 col-sm-offset-1">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalScience"><img class="img-circle " src="heading_picture/science.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button type="button" style="background-color: inherit;border: none"><a href="html/sci_html.html"><img class="img-circle " src="heading_picture/science.jpg" alt="Generic placeholder image"></button>
                             <h2 class="heading-text">Science</h2>
                     </div><!-- /.col-sm-1 -->
 
@@ -396,13 +402,13 @@ Version : 1.5
 
                     <div class="col-sm-1 col-sm-offset-1">
 
-                            <button type="button" style="background-color: inherit;border: none" data-toggle="modal" data-target="#modalMath"><img class="img-circle " src="heading_picture/math.jpg" alt="Generic placeholder image" width="140" height="140"></button>
+                            <button type="button" style="background-color: inherit;border: none"><a href="html/math_html.html"><img class="img-circle" src="heading_picture/math.jpg" alt="Generic placeholder image" ></button>
                             <h2 class="heading-text">Math</h2>
                     </div><!-- /.col-sm-1 -->
 
 					<div class="col-sm-1 col-sm-offset-1">
-                            <button type="button" style="background-color: inherit;border: none" ><a href="test.html"><img class="img-circle " src="heading_picture/math.jpg" alt="Generic placeholder image" width="40" height="40"></a></button>
-							<h2 class="heading-text">test</h2>
+                            <button type="button" style="background-color: inherit;border: none" ><a href="html/oth_html.html"><img class="img-circle" src="heading_picture/other.jpg" alt="Generic placeholder image"></button>
+							<h2 class="heading-text">進階學習</h2></a>
                     </div><!-- /.col-sm-1 -->
 
 				</div><!-- /.row -->
@@ -431,7 +437,7 @@ Version : 1.5
 				
         </div><!-- /.container -->
 		<footer>
-		<p>&copy; 2016 Physics Web &middot;</p>
+		<p>&copy; 2016 Physics Web</p>
 		</footer>
         <!--art child window -->
 
