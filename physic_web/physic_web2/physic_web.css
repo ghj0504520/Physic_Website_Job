@@ -101,10 +101,16 @@
 
 #allBTN{
 	position: absolute;
-	top: 15%;
+	top: 20%;
 	height:20px;/*與heading的長度相同*/
 	width:120px;
 	text-align:center;
 	color:#b0c4de;
 	font-size: 15px;
 }
+.navbar-nav > li > a, .navbar-brand {
+	padding-top:10px ;
+	padding-bottom:0 ;
+	height: 40px;
+}
+.navbar {min-height:40px ;}

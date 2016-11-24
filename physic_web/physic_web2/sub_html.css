@@ -12,3 +12,9 @@
 	width:60%;
 	margin-top:65px;
 }
+.navbar-nav > li > a, .navbar-brand {
+	padding-top:10px ;
+	padding-bottom:0 ;
+	height: 40px;
+}
+.navbar {min-height:40px ;}

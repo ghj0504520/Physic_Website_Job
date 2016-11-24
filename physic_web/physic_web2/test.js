@@ -3,17 +3,22 @@ $(document).ready(function() {
 	elementMove();
 });
 var videoMove=function () {
-	/*if(document.getElementById('#totalVideo'))*/ {
+
+	/*if($("#totalVideo").attr("src")!="")*/ {
+
 		// 取得其 top 值
 		var $totalVideo = $('#totalVideo'),
 			_top = $totalVideo.offset().top;
+		var clientWin=screen.height;
+		//alert(clientWin);
 
 		// 當網頁捲軸捲動時
 		var $win = $(window).scroll(function () {
 			
-			// 如果現在的 scrollTop 大於原本的 top+300 時
-			if ($win.scrollTop() >= _top) {
+			// 如果現在的 scrollTop 大於原本的 top 時
+			if ($win.scrollTop() >= _top+ clientWin/4) {
 
+				if($('#totalVideo')[0].contentWindow)
 				$('#totalVideo')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 			}
 		});
@@ -35,14 +40,14 @@ var elementMove=function () {
 					// 設定座標系統為 fixed
 					$allBTN.css({
 						position: 'fixed',
-						top: 15
+						top: 20
 					});
 				}
 			} else {
 				// 還原座標系統為 absolute
 				$allBTN.css({
 					position: 'absolute',
-					top: '15%'
+					top: '20%'
 				});
 			}
 		});
