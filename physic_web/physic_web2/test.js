@@ -18,8 +18,11 @@ var videoMove=function () {
 			// 如果現在的 scrollTop 大於原本的 top 時
 			if ($win.scrollTop() >= _top+ clientWin/4) {
 
-				if($('#totalVideo')[0].contentWindow)
-				$('#totalVideo')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+					try {
+						$('#totalVideo')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+					}catch (err){
+
+					}
 			}
 		});
 	}
