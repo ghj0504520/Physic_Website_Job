@@ -7,8 +7,9 @@
 
 
 .heading-text {
+
 	height:0px;/*與heading的長度相同*/
-	width:142px;
+	width:122px;
     text-align:center;
 	color:#b0c4de;
 	font-size:30px;
@@ -77,14 +78,17 @@
 	font-size:35px;
 	font-family: DFKai-sb;*/
 	
-	display:inline-block;
-	vertical-align:middle;
+	/*display:inline-block;
+	vertical-align:middle;*/
+	position:absolute;
+	left:45%;top:20px;
 	font-family:Microsoft JhengHei;
 	color:#ffffff;
 	font-weight:bold;
 	font-size:35px;
 	text-shadow:5px 5px 5px #000000;
-	margin-left:15%
+	text-align:center;
+	/*margin-left:15%*/
 }
 .kejibu-div{
 	position:absolute;
