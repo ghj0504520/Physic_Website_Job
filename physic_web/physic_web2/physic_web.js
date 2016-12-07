@@ -34,12 +34,12 @@ $(document).ready(function() {
 	
 	/*設定底下的html長度*/
 	/*長度大小:不要讓內部的html有右邊的拉把(bar)即可*/
-	var art_html_height = 700; 
-	var eng_html_height = 900;
-	var tec_html_height = 1900;
-	var sci_html_height = 2500;
-	var math_html_height = 2700;
-	var oth_html_height = 7000;
+	var art_html_height = 900; 
+	var eng_html_height = 1100;
+	var tec_html_height = 2100;
+	var sci_html_height = 2700;
+	var math_html_height = 2900;
+	var oth_html_height = 7200;
 	
 	/*======================================================================*/
 	
