@@ -94,11 +94,23 @@
 					width:50%;
 				}
 			}
-			@media screen and (max-width:1367px){
-				.tophead-style{
-					font-size:30px;
-					margin-left:8%;
+			@media screen and (max-width:1140px){
+				.main-nsysu{
+					width:300px;
 				}
+				.tophead-style{
+					font-size:25px;
+					margin-left:10%;
+				}
+				.kejibu-div{
+					font-size:15px;
+				}
+			}
+			@media screen and (max-width:970px){
+				.kubei{
+					display:inline;
+				}
+				
 			}
 			@media screen and (max-width:1140px){
 				.main-nsysu{
@@ -106,19 +118,9 @@
 				}
 				.tophead-style{
 					font-size:25px;
-					margin-left:8%;
+					margin-left:10%;
 				}
-			}
-			@media screen and (max-width:830px){
-		
-				.tophead-style{
-					font-size:18px;
-				}
-			}
-			@media screen and (max-width:695px){
-		
-				.tophead-style{
-					margin-left:5%;
+				.kejibu-div{
 					font-size:15px;
 				}
 			}
@@ -128,13 +130,24 @@
 					display:none;
 				}
 			}
-			
-			@media screen and (max-width:630px){
-		
-				.main-nsysu{
-					width:180px;
+			@media screen and (max-width:750px){
+				/*kejibu words*/
+				.kejibu-div{
+					display:none;
 				}
 			}
+				
+			@media screen and (max-width:550px){
+				/*for nsysu.png*/
+				.main-nsysu{
+					width:200px;
+				}
+			
+				.tophead-style{
+					font-size:20px;
+				}
+			}
+
 		</style>
 		<script type="text/javascript">
 			/*$(document).ready(function(){
@@ -180,7 +193,12 @@
 		</div>-->
 		<div>			
 			<img class="main-nsysu" src="../nsysu.png"/>
-			<span class="tophead-style" style="color:#26FFFF;">「苦背三年公式，不如動手做實驗」</span>
+			<span class="tophead-style">高中物理動手學</span>
+			<span></span>
+		</div>
+		<div class="kejibu-div">
+			<span style="margin-left:50px;">本活動由科技部科普計畫補助</span>
+			<div class="kubei">「苦背三年公式，不如動手做實驗」</div>
 		</div>
 		<nav class="navbar navbar-inverse" style="min-height:30px">
 			<div class="container-fluid" style="min-height:30px">

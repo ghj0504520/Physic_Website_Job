@@ -92,10 +92,15 @@
 }
 .kejibu-div{
 	position:absolute;
-	right:0px;top:0px;
+	right:5px;top:0px;
 	font-family: DFKai-sb;
 	color:#ABFFAB;
 	font-size:20px;
+}
+.kubei{
+	
+	color:#26FFFF;
+
 }
 .img-circle{
 	width:120px;

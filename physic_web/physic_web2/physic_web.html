@@ -141,7 +141,8 @@ Version : 1.5
 					font-size:15px;
 				}
 			}
-			
+				
+
 			@media screen and (min-height:911px){
 				.carousel {
 					max-height: 650px;
@@ -151,20 +152,31 @@ Version : 1.5
 				}
 				
 			}
+			@media screen and (max-width:970px){
+				.kubei{
+					display:inline;
+				}
+				
+			}
 			@media screen and (max-width:780px){
 				.navbar {
 					display:none;
 				}
 						
 			}
-			@media screen and (max-width:550px){
-				/*for nsysu.png and kejibu words*/
-				.main-nsysu{
-					width:200px;
-				}
+			@media screen and (max-width:750px){
+				/*kejibu words*/
 				.kejibu-div{
 					display:none;
 				}
+			}
+				
+			@media screen and (max-width:550px){
+				/*for nsysu.png*/
+				.main-nsysu{
+					width:200px;
+				}
+			
 				.tophead-style{
 					font-size:20px;
 				}
@@ -188,7 +200,8 @@ Version : 1.5
 			<span></span>
 		</div>
 		<div class="kejibu-div">
-			本活動由科技部科普計畫補助
+			<span style="margin-left:50px;">本活動由科技部科普計畫補助</span>
+			<div class="kubei">「苦背三年公式，不如動手做實驗」</div>
 		</div>
 
         <nav class="navbar navbar-inverse" >
@@ -198,7 +211,7 @@ Version : 1.5
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">高中物理動手學</a></li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">一 <span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">一,物體的運動<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="padding-top: 0px">
                             <li><a style="background-color: #2aabd2;font-weight: bold"> > 物體的運動</a></li>
                             <li><a href="/Physic_Website_Job/physic_web/physic_web2/physic_web.html">運動軌跡自由落體</a></li>
@@ -206,20 +219,20 @@ Version : 1.5
                             <li><a href="#">克卜勒，圓周運動，萬有引力</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">二 <span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">二,物質間基本交互作用<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="padding-top: 0px">
                             <li><a style="background-color: #2aabd2;font-weight: bold"> > 物質間基本交互作用</a></li>
                             <li><a href="#">物質間基本交互作用力</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">三 <span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">三,電與磁<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="padding-top: 0px">
                             <li><a style="background-color: #2aabd2;font-weight: bold"> > 電與磁</a></li>
                             <li><a href="#">電流磁效應</a></li>
                             <li><a href="#">電磁感應</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">四 <span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">四,波<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="padding-top: 0px">
 
                             <li><a style="background-color: #2aabd2;font-weight: bold"> > 波</a></li>
@@ -229,7 +242,7 @@ Version : 1.5
                             <li><a href="#">繞射和干涉</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">五 <span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">五,能量<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="padding-top: 0px">
                             <li><a style="background-color: #2aabd2;font-weight: bold"> > 能量</a></li>
                             <li><a href="#">力學能守恆-功，動能，彈力位能，重力位能，碰撞</a></li>
@@ -239,7 +252,7 @@ Version : 1.5
                             <li><a href="#">核能</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">六 <span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">六,量子現象<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="padding-top: 0px">
                             <li><a style="background-color: #2aabd2;font-weight: bold"> > 量子現象</a></li>
                             <li><a href="#">量子物理</a></li>
