@@ -145,33 +145,26 @@
 			}
 		</style>
 		<script type="text/javascript">
-			/*$(document).ready(function(){
-				
-				var art_html = 500;
-				var eng_html = 700;
-				var tec_html = 1500;
-				var sci_html = 2000;
-				var math_html = 2500;
-				/*$("#obj").width($("#cont").width());
-				$("#obj").height($("#cont").height());
-				$("#inner-html").height(math_html+"px");
-
-			});*/
-			/*設定底下的html長度*/
-			/*var art_html_height = 500;
-			var eng_html_height = 700;
-			var tec_html_height = 1500;
-			var sci_html_height = 2000;
-			var math_html_height = 2500;
-			var oth_html_height = 4000;*/
-			
-			/*============================================================*/
+		
 			$(document).ready(function() {/*每次進入頁面 就觸發button*/
 				$( "#art_btn" ).trigger( "click" );
+				
+				$("#link1").click(function(){
+					$("#for_changing_video").attr("href", "https://www.youtube.com/embed/oA1LqxAUyYc");
+					$("#art_btn" ).trigger( "click");
+				});
+				$("#link2").click(function(){
+					$("#for_changing_video").attr("href", "https://www.youtube.com/embed/BCkHnvDGWOY");
+					$("#art_btn" ).trigger( "click");
+				});
+				$("#link3").click(function(){
+					$("#for_changing_video").attr("href", "https://www.youtube.com/embed/aHmuLioUUcQ");
+					$("#art_btn" ).trigger( "click");
+				});
+	
+				
 			});
-			
-			
-			
+				
 		</script>
 	</head>
 		
@@ -306,13 +299,38 @@
 		</div>
 
 		<div align="center">
-			<iframe id="totalVideo" class="video-style" src="https://www.youtube.com/embed/BCkHnvDGWOY" frameborder="0" allowfullscreen></iframe>
+			<iframe id="totalVideo" class="video-style" src="" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<br>
 		<br>
-			<div id="div-html" style="text-align:center;">
+			<!--<div id="div-html" style="text-align:center;">
 				<embed id="inner-html" src="data/art.htm"></embed>
-			</div>
+			</div>-->
+		<div style="font-size:40px;text-align:center;color:#5599FF;font-family: DFKai-sb;">
+			相關影片
+		</div>
+		<div class="art-html-video">
+			<a id="link1" class="art-html-content">
+				多人花式跳傘
+			</a>
+			</br>
+			<a id="link2" class="art-html-content">
+				飛鼠裝滑翔運動
+			</a>
+			</br>
+			<a id="link3" class="art-html-content">
+			【開創歷史】跳傘好手不用降傘 從2.5萬呎高空成功跳落安全網
+			</a>
+		</div>
+		</br>
+		</br>
+		<!--
+		改變art的影片網址
+		使用youtube->分享->嵌入
+		art_html不用data/html
+		下方為default影片
+		-->
+		<a  href="https://www.youtube.com/embed/BCkHnvDGWOY?enablejsapi=1" id="for_changing_video"></a>
 	</body>
 
 		

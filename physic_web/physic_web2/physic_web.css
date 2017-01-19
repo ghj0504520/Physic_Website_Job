@@ -38,6 +38,17 @@
 
 }
 
+.art-html-content{
+	
+	font-family: DFKai-sb;
+	color:#FFBB00;
+	font-size:35px;
+	
+}
+.art-html-video{
+	text-align:center;
+}
+
 .modal-title-style{
 	font-size:15px;
 }

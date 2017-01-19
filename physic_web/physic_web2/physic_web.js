@@ -1,11 +1,14 @@
 
+
+
 $(document).ready(function() {
 
 	/*======================================================================*/
-
+	
 
 	/*改變art的網址*/
-	var videoART="https://www.youtube.com/embed/BCkHnvDGWOY";
+	/*使用youtube->分享->嵌入*/
+	var videoART;
 	var videoArt=videoART+"?enablejsapi=1";
 	/*改變engineering的網址*/
 	var videoENG="https://www.youtube.com/embed/II1g92jFItE";
@@ -91,7 +94,13 @@ $(document).ready(function() {
 	
 	//videoMove();
 	
+
 	$("#art_btn").click(function(){
+		
+		videoArt = $("#for_changing_video").attr("href");
+		videoArt = videoArt +"?enablejsapi=1";
+		
+		//alert(videoArt);
 		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
@@ -100,8 +109,7 @@ $(document).ready(function() {
 		if(videoART!="")
 		{
 			parent2.append(newframe);
-			/*$("#totalVideo").attr("height","600");
-			$("#totalVideo").attr("width","60%");*/
+
 			$("#totalVideo").addClass("video-style");
 			$('#totalVideo').attr('src', videoArt + "&autoplay=1");
 		}
