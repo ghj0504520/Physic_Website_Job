@@ -81,6 +81,8 @@
 	left:0px;top:0px;
 }
 .main-nsysu{
+	margin-top:3px;
+	margin-bottom:4px;
 	width:auto;
 }
 .tophead-style{
@@ -92,7 +94,7 @@
 	/*display:inline-block;
 	vertical-align:middle;*/
 	position:absolute;
-	left:45%;top:20px;
+	left:42.5%;top:20px;
 	font-family:Microsoft JhengHei;
 	color:#ffffff;
 	font-weight:bold;
@@ -111,6 +113,10 @@
 .kubei{
 	
 	color:#26FFFF;
+	font-size:26px;
+	margin-right:10px;
+	margin-top:5px;
+	/*text-align:center;*/
 
 }
 .img-circle{
