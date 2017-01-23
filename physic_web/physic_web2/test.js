@@ -43,7 +43,7 @@ var elementMove=function () {
 					// 設定座標系統為 fixed
 					$allBTN.css({
 						position: 'fixed',
-						top: 20
+						top: 15
 					});
 				}
 			} else {
