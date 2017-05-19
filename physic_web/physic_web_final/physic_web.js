@@ -5,51 +5,54 @@ $(document).ready(function() {
 
 	/*======================================================================*/
 	
-
-	/*§ïÅÜartªººô§}*/
-	/*¨Ï¥Îyoutube->¤À¨É->´O¤J*/
-	var videoART;
-	var videoArt=videoART+"?enablejsapi=1";
-	/*§ïÅÜengineeringªººô§}*/
+	/*
+	ä½¿ç”¨youtube->åˆ†äº«->åµŒå…¥(è£¡é¢çš„src="http....")
+	æ”¹è®Šartçš„ç¶²å€
+	*/
+	var videoART1="https://www.youtube.com/embed/oA1LqxAUyYc";
+	var	videoART2="https://www.youtube.com/embed/BCkHnvDGWOY";
+	var videoART3="https://www.youtube.com/embed/aHmuLioUUcQ";
+	/*æ”¹linkçš„åå­—*/
+	var name1="å¤šäººèŠ±å¼è·³å‚˜";
+	var name2="é£›é¼ è£æ»‘ç¿”é‹å‹•";
+	var name3="ã€é–‹å‰µæ­·å²ã€‘è·³å‚˜å¥½æ‰‹ä¸ç”¨é™å‚˜ å¾2.5è¬å‘é«˜ç©ºæˆåŠŸè·³è½å®‰å…¨ç¶²";
+	
+	var videoArt1=videoART1+"?enablejsapi=1";
+	var videoArt2=videoART2+"?enablejsapi=1";
+	var videoArt3=videoART3+"?enablejsapi=1";
+	/*æ”¹è®Šengineeringçš„ç¶²å€*/
 	var videoENG="https://www.youtube.com/embed/II1g92jFItE";
 	var videoEng=videoENG+"?enablejsapi=1";
-	/*§ïÅÜtechnologyªººô§}*/
+	/*æ”¹è®Štechnologyçš„ç¶²å€*/
 	var videoTEC="";
 	var videoTec=videoTEC+"?enablejsapi=1";
-	/*§ïÅÜscienceªººô§}*/
+	/*æ”¹è®Šscienceçš„ç¶²å€*/
 	var videoSCI="";
 	var videoSci=videoSCI+"?enablejsapi=1";
-	/*§ïÅÜmathªººô§}*/
+	/*æ”¹è®Šmathçš„ç¶²å€*/
 	var videoMATH="";
 	var videoMath=videoMATH+"?enablejsapi=1";
-	/*§ïÅÜotherªººô§}*/
+	/*æ”¹è®Šotherçš„ç¶²å€*/
 	var videoOTHER="";
 	var videoOther=videoOther+"?enablejsapi=1";
 
-	var path = "html/";
-	/*
-	var art_html = "art.htm";
-	var eng_html = "engineering.htm";
-	var tec_html = "technology.htm";
-	var sci_html = "science.htm";
-	var math_html = "math.htm";
-	*/
+
 	
-	/*³]©w©³¤Uªºhtmlªø«×*/
-	/*ªø«×¤j¤p:¤£­nÅı¤º³¡ªºhtml¦³¥kÃäªº©Ô§â(bar)§Y¥i*/
+	/*è¨­å®šåº•ä¸‹çš„htmlé•·åº¦*/
+	/*é•·åº¦å¤§å°:ä¸è¦è®“å…§éƒ¨çš„pdfæœ‰å³é‚Šçš„æ‹‰æŠŠ(scroll bar)å³å¯*/
 	var art_html_height = 900; 
-	var eng_html_height = 1100;
-	var tec_html_height = 2100;
-	var sci_html_height = 2700;
-	var math_html_height = 2900;
-	var oth_html_height = 7200;
+	var eng_html_height = 1300;
+	var tec_html_height = 2400;
+	var sci_html_height = 3500;
+	var math_html_height = 4000;
+	var oth_html_height = 16000;
 	
 	/*======================================================================*/
 	
 	
 	
 
-	/*§ïÅÜ¤U¤è¸ê®Æ­I´ºÃC¦â*/
+	/*æ”¹è®Šä¸‹æ–¹è³‡æ–™èƒŒæ™¯é¡è‰²*/
 	$('.inner-html').css("background-color", "white");
 
 
@@ -93,12 +96,32 @@ $(document).ready(function() {
 	});*/
 	
 	//videoMove();
+	//$( "#art_btn" ).trigger( "click" );
+	/*if(screen.width<1366 && screen.width>600)
+		$('.inner-html').attr('height','400vw');*/
 	
-
+	$("#link1").click(function(){
+		$("#for_changing_video").attr("href", videoArt1);
+		$("#art_btn" ).trigger( "click");
+	});
+	$("#link2").click(function(){
+		$("#for_changing_video").attr("href", videoArt2);
+		$("#art_btn" ).trigger( "click");
+	});
+	$("#link3").click(function(){
+		$("#for_changing_video").attr("href", videoArt3);
+		$("#art_btn" ).trigger( "click");
+	});
+	
+	$('a#link1').text(name1);
+	$('a#link2').text(name2);
+	$('a#link3').text(name3);
+	
 	$("#art_btn").click(function(){
 		
+		var videoArt = "";
 		videoArt = $("#for_changing_video").attr("href");
-		videoArt = videoArt +"?enablejsapi=1";
+		//videoArt = videoArt +"?enablejsapi=1";
 		
 		//alert(videoArt);
 		
@@ -106,7 +129,7 @@ $(document).ready(function() {
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
 		
 		$('#totalVideo').remove();
-		if(videoART!="")
+		if(videoArt!="")
 		{
 			parent2.append(newframe);
 
@@ -143,7 +166,7 @@ $(document).ready(function() {
 	
 		}
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='data/engineering.htm' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/engineering.pdf' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
@@ -168,7 +191,7 @@ $(document).ready(function() {
 		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='data/technology.htm' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/technology.pdf' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
@@ -191,7 +214,7 @@ $(document).ready(function() {
 		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='data/science.htm' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/science.pdf' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
@@ -216,7 +239,7 @@ $(document).ready(function() {
 		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='data/math.htm' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/math.pdf' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
@@ -241,7 +264,7 @@ $(document).ready(function() {
 		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='data/other.htm' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/other.pdf' id='inner-html'>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
