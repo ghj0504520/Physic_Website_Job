@@ -45,7 +45,7 @@ $(document).ready(function() {
 	var tec_html_height = 2400;
 	var sci_html_height = 3500;
 	var math_html_height = 4000;
-	var oth_html_height = 16000;
+	var oth_html_height = 7200;
 	
 	
 	/*=========================使用者更改部分結束==================================*/
