@@ -307,19 +307,26 @@ $(document).ready(function() {
 	
 	
 	//elementMove();
+	
 });
 
 /*=================Responsive Desgin======================*/
+
+
 function openNav() {
+	$('.container a').css('display','none');
     document.getElementById("mySidenav").style.width = "200px";
     document.getElementById("main").style.marginLeft = "200px";
 	$('.sidebar').css('opacity', '0');
+	setTimeout("$('.container a').css('display','block');", 500);
 }
 
 function closeNav() {
+	$('.container a').css('display','none');
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
 	$('.sidebar').css('opacity', '1');
+	
 }
 
 /*=========================================================*/
