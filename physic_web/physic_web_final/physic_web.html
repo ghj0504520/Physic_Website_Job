@@ -32,7 +32,8 @@ Version : 1.5
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	    <!-- physic_web自訂的css-->
 	    <link href="physic_web.css" rel="stylesheet">
-	
+
+
 	    <link href="less.css" rel="stylesheet">
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -144,7 +145,12 @@ Version : 1.5
 				
 			}
 				
-
+			@media screen and (max-width:940px){
+				.main-nsysu{
+					width:100px;
+					height:100px;
+				}
+			}
 			@media screen and (min-height:911px){
 				.carousel {
 					max-height: 650px;
@@ -154,35 +160,50 @@ Version : 1.5
 				}
 				
 			}
-			@media screen and (max-width:970px){
-				/*.kubei{
-					display:inline;
-				}
-				*/
-			}
-			@media screen and (max-width:780px){
+			
+			/*Enter moblie state*/
+			@media screen and (max-width:840px){
 				.navbar {
 					display:none;
 				}
-						
-			}
-			@media screen and (max-width:750px){
-				/*kejibu words*/
-				.kejibu-div{
+				.kubei{
+					font-size:20px;
+
+					display:block;
+				}
+				#main{
+					display:block;
+				}
+				.main-nsysu{
 					display:none;
 				}
-			}
-				
-			@media screen and (max-width:550px){
-				/*for nsysu.png*/
-				.main-nsysu{
-					width:200px;
+				.img-circle{
+					display:none;
 				}
-			
+				.heading-text{
+					display:none;
+				}
 				.tophead-style{
-					font-size:20px;
+					margin-top:6%;
+					left:30%;
+					position:relative;
 				}
+				.carousel-indicators{
+					display:none;
+				}
+				.carousel_content{		/*更改投影片內容字體*/
+					font-size:22px;
+				}
+				.carousel {
+					max-height:350px;
+					margin-top:20%;
+				}
+				.carousel .item {
+					height: 350px;		/*change inner item height of the carousel*/
+				}
+						
 			}
+
         </style>
 		<script type="text/javascript">
 			/*alert("Total Height: " + screen.height);
@@ -196,6 +217,65 @@ Version : 1.5
 
 
     <body>
+	
+		<!--========Responsive Design==============-->
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="container">
+				<div href="#col1" data-toggle="collapse" class="sidebarcoll">Content</div>
+				<div id="col1" class="collapse">
+					<a href="html/art_html.html">Art</a>
+					<a href="html/eng_html.html">Engineering/Product</a>
+					<a href="html/tec_html.html">Technology</a>
+					<a href="html/sci_html.html">Science</a>
+					<a href="html/math_html.html">Math</a>
+				</div>
+				<div href="#col2" data-toggle="collapse" class="sidebarcoll">一,物體的運動</div>
+				<div id="col2" class="collapse">
+					<a href="physic_web.html">運動軌跡自由落體</a>
+					<a href="#">牛頓運動定律</a>
+					<a href="#">克卜勒，圓周運動，萬有引力</a>
+				</div>
+				<div href="#col3" data-toggle="collapse" class="sidebarcoll">二,物質間基本交互作用</div>
+				<div id="col3" class="collapse">
+					<a href="#">物質間基本交互作用力</a>
+				</div>
+				
+				<div href="#col4" data-toggle="collapse" class="sidebarcoll">三,電與磁</div>
+				<div id="col4" class="collapse">
+					<a href="#">電流磁效應</a>
+					<a href="#">電磁感應</a>
+				</div>
+				
+				<div href="#col5" data-toggle="collapse" class="sidebarcoll">四,波</div>
+				<div id="col5" class="collapse">
+					<a href="#">波的性質</a>
+                    <a href="#">聲音，都卜勒</a>
+                    <a href="#">光的反射與折射</a>
+                    <a href="#">繞射和干涉</a>
+				</div>
+				<div href="#col6" data-toggle="collapse" class="sidebarcoll">五,能量</div>
+				<div id="col6" class="collapse">
+					<a href="#">力學能守恆-功，動能，彈力位能，重力位能，碰撞</a>
+					<a href="#">靜力平衡</a>
+					<a href="#">擺，簡諧運動</a>
+					<a href="#">熱</a>
+					<a href="#">核能</a>
+				</div>
+				
+				<div href="#col7" data-toggle="collapse" class="sidebarcoll">六,量子現象</div>
+				<div id="col7" class="collapse">
+					<a href="#">量子物理</a>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div id="main">
+		  <span class="sidebar" onclick="openNav()">&#9776;</span>
+		</div>
+		<!--=============End========================-->
+		
 		<div>			
 			<img class="main-nsysu" src="nsysu.png"/>
 			<img class="main-nsysu" src="kejibu.png"/>
@@ -222,7 +302,7 @@ Version : 1.5
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">一,物體的運動<span class="caret"></span></a>
                         <ul class="dropdown-menu" style="padding-top: 0px;">
                             <li><a> > 物體的運動</a></li>
-                            <li><a href="/Physic_Website_Job/physic_web/physic_web2/physic_web.html">運動軌跡自由落體</a></li>
+                            <li><a href="physic_web.html">運動軌跡自由落體</a></li>
                             <li><a href="#">牛頓運動定律</a></li>
                             <li><a href="#">克卜勒，圓周運動，萬有引力</a></li>
                         </ul>
