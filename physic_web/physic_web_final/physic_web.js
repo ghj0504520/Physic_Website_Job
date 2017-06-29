@@ -315,8 +315,8 @@ $(document).ready(function() {
 
 function openNav() {
 	$('.container a').css('display','none');
-    document.getElementById("mySidenav").style.width = "200px";
-    document.getElementById("main").style.marginLeft = "200px";
+    document.getElementById("mySidenav").style.width = "230px";
+    document.getElementById("main").style.marginLeft = "230px";
 	$('.sidebar').css('opacity', '0');
 	setTimeout("$('.container a').css('display','block');", 500);
 }
