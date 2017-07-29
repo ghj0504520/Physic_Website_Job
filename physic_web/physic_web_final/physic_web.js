@@ -7,34 +7,69 @@ $(document).ready(function() {
 	
 	/*
 	使用youtube->分享->嵌入(裡面的src="http....")
-	改變art的網址
-	*/
-	var videoART1="https://www.youtube.com/embed/oA1LqxAUyYc";
-	var	videoART2="https://www.youtube.com/embed/BCkHnvDGWOY";
-	var videoART3="https://www.youtube.com/embed/aHmuLioUUcQ";
-	/*改link的名字*/
-	var name1="多人花式跳傘";
-	var name2="飛鼠裝滑翔運動";
-	var name3="【開創歷史】跳傘好手不用降傘 從2.5萬呎高空成功跳落安全網";
 	
-	var videoArt1=videoART1+"?enablejsapi=1";
-	var videoArt2=videoART2+"?enablejsapi=1";
-	var videoArt3=videoART3+"?enablejsapi=1";
-	/*改變engineering的網址*/
-	var videoENG="https://www.youtube.com/embed/II1g92jFItE";
-	var videoEng=videoENG+"?enablejsapi=1";
-	/*改變technology的網址*/
-	var videoTEC="";
-	var videoTec=videoTEC+"?enablejsapi=1";
-	/*改變science的網址*/
-	var videoSCI="";
-	var videoSci=videoSCI+"?enablejsapi=1";
-	/*改變math的網址*/
-	var videoMATH="";
-	var videoMath=videoMATH+"?enablejsapi=1";
-	/*改變other的網址*/
-	var videoOTHER="";
-	var videoOther=videoOther+"?enablejsapi=1";
+	(1)
+	更改網址:
+	["嵌入網址1",
+	 "嵌入網址2",
+	 .
+	 .
+	 .
+	]
+	
+	(2)
+	更改連結文字:
+	["嵌入網址1的文字",
+	 "嵌入網址2的文字",
+	 .
+	 .
+	 .
+	]
+	(3)
+	若是只有填入嵌入網址，而沒有文字，上方youtube影片將為嵌入網址1的影片
+	e.g.
+	videoENG=["https://www.youtube.com/embed/II1g92jFItE"];
+	videoENG_name=[];
+	上方影片就會是https://www.youtube.com/embed/II1g92jFItE
+	而下方不會出現相關連結
+	
+	
+	*/
+	/*art網址*/
+	var videoART = ["https://www.youtube.com/embed/oA1LqxAUyYc",
+					"https://www.youtube.com/embed/BCkHnvDGWOY",
+					"https://www.youtube.com/embed/aHmuLioUUcQ"]
+	/*art連結文字*/
+	var videoART_name = ["多人花式跳傘",
+						 "飛鼠裝滑翔運動",
+						 "【開創歷史】跳傘好手不用降傘 從2.5萬呎高空成功跳落安全網"]
+	
+	
+	/*engineering的網址*/
+	var videoENG=["https://www.youtube.com/embed/II1g92jFItE"];
+	/*ngineering連結文字*/
+	var videoENG_name=[];
+	
+	
+	/*technology的網址*/
+	var videoTEC=[];
+	/*technology連結文字*/
+	var videoTEC_name=[];
+	
+	/*science的網址*/
+	var videoSCI=[];
+	/*science的網址*/
+	var videoSCI_name=[];
+	
+	/*math的網址*/
+	var videoMATH=[];
+	/*math連結文字*/
+	var videoMATH_name=[];
+	
+	/*other的網址*/
+	var videoOTH=[];
+	/*other連結文字*/
+	var videoOTH_name=[];
 
 
 	
@@ -93,34 +128,16 @@ $(document).ready(function() {
 	});*/
 	
 	//videoMove();
-	//$( "#art_btn" ).trigger( "click" );
-	/*if(screen.width<1366 && screen.width>600)
-		$('.inner-html').attr('height','400vw');*/
-	
-	$("#link1").click(function(){
-		$("#for_changing_video").attr("href", videoArt1);
-		$("#art_btn" ).trigger( "click");
-	});
-	$("#link2").click(function(){
-		$("#for_changing_video").attr("href", videoArt2);
-		$("#art_btn" ).trigger( "click");
-	});
-	$("#link3").click(function(){
-		$("#for_changing_video").attr("href", videoArt3);
-		$("#art_btn" ).trigger( "click");
-	});
-	
-	$('a#link1').text(name1);
-	$('a#link2').text(name2);
-	$('a#link3').text(name3);
 	
 	$("#art_btn").click(function(){
 		
 		var videoArt = "";
-		videoArt = $("#for_changing_video").attr("href");
-		//videoArt = videoArt +"?enablejsapi=1";
+		videoArt = $("#art_changing_video").attr("href");
 		
-		//alert(videoArt);
+		if(videoArt=="" && videoART.length>0)
+			videoArt = videoART[0]+"?enablejsapi=1";/*Take first*/
+		
+			
 		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
@@ -149,6 +166,14 @@ $(document).ready(function() {
 	
 	$("#eng_btn").click(function(){
 		
+		var videoEng = "";
+		videoEng = $("#eng_changing_video").attr("href");
+		
+		if(videoEng=="" && videoENG.length>0)
+			videoEng = videoENG[0]+"?enablejsapi=1";/*Take first*/
+			
+		
+		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' frameborder=0 allowfullscreen></iframe>";
 		$('#totalVideo').remove();
@@ -172,6 +197,13 @@ $(document).ready(function() {
 		$("#inner-html").addClass("inner-html"); 
 	});
 	$("#tec_btn").click(function(){
+		
+		var videoTec = "";
+		videoTec = $("#tec_changing_video").attr("href");
+		
+		if(videoTec=="" && videoTEC.length>0)
+			videoTec = videoTEC[0]+"?enablejsapi=1";/*Take first*/
+		
 		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
@@ -198,6 +230,12 @@ $(document).ready(function() {
 	});
 	$("#sci_btn").click(function(){
 		
+		var videoSci = "";
+		videoSci = $("#sci_changing_video").attr("href");
+		
+		if(videoSci=="" && videoSCI.length>0)
+			videoSci = videoSCI[0]+"?enablejsapi=1";/*Take first*/
+		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
 		$('#totalVideo').remove();
@@ -220,6 +258,12 @@ $(document).ready(function() {
 		$("#inner-html").addClass("inner-html"); 
 	});
 	$("#math_btn").click(function(){
+		
+		var videoMath = "";
+		videoMath = $("#math_changing_video").attr("href");
+		
+		if(videoMath=="" && videoMATH.length>0)
+			videoMath = videoMATH[0]+"?enablejsapi=1";/*Take first*/
 		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
@@ -246,17 +290,22 @@ $(document).ready(function() {
 	});
 	$("#oth_btn").click(function(){
 		
+		var videoOth = "";
+		videoOth = $("#oth_changing_video").attr("href");
+		
+		if(videoOth=="" && videoOTH.length>0)
+			videoOth = videoOTH[0]+"?enablejsapi=1";/*Take first*/
 		
 		var parent2 = $('#totalVideo').parent();
 		var newframe = "<iframe id='totalVideo' src='' frameborder=0 allowfullscreen></iframe>";
 		$('#totalVideo').remove();
 		
-		if(videoOTHER!="")
+		if(videoOth!="")
 		{
 			parent2.append(newframe);
 		
 			$("#totalVideo").addClass("video-style");
-			$('#totalVideo').attr('src', videoOther + "&autoplay=1");
+			$('#totalVideo').attr('src', videoOth + "&autoplay=1");
 		}
 		
 		
@@ -271,6 +320,91 @@ $(document).ready(function() {
 	});
 	/*=======================================================================*/
 	
+	
+	/*===================Dynamic addition of video link======================*/
+	
+	/*Use let to declare in order to make video_link be the local variables*/
+	let page_type=6;/*6 types of buttons(no chat)*/
+	
+	for(let j=0;j<page_type;j++)
+	{
+		let page_length;/*length of link array*/
+		let type_name = "";
+		let video_array;/*link array*/
+		let video_name;/*link name array*/
+		let name_length;/*lengh of link name array*/
+		switch(j)
+		{
+			case 0:
+				type_name = 'art';
+				page_length = videoART.length;
+				video_array = videoART.slice();
+				video_name = videoART_name.slice();
+				break;
+			case 1:
+				type_name = 'eng';
+				page_length = videoENG.length;
+				video_array = videoENG.slice();
+				video_name = videoENG_name.slice();
+				break;
+			case 2:
+				type_name = 'tec';
+				page_length = videoTEC.length;
+				video_array = videoTEC.slice();
+				video_name = videoTEC_name.slice();
+				break;
+			case 3:
+				type_name = 'sci';
+				page_length = videoSCI.length;
+				video_array = videoSCI.slice();
+				video_name = videoSCI_name.slice();
+				break;
+			case 4:
+				type_name = 'math';
+				page_length = videoMATH.length;
+				video_array = videoMATH.slice();
+				video_name = videoMATH_name.slice();
+				break;
+			case 5:
+				type_name = 'oth';
+				page_length = videoOTH.length;
+				video_array = videoOTH.slice();
+				video_name = videoOTH_name.slice();
+				break;
+			default:
+				;
+		}
+		
+				
+		for(let i=1;i<=page_length;i++)
+		{
+			
+			let video_link = video_array[i-1]+"?enablejsapi=1";
+			let new_element = '<a id="'+type_name+'link'+i+'" class="html-content"></a></br>'
+			$('.'+type_name+'-html-video').append(new_element);
+			
+			
+			$('#'+type_name+'link'+i).click(function(){
+				
+				$('#'+type_name+'_changing_video').attr("href", video_link);
+				$('#'+type_name+'_btn').trigger("click");
+			});
+			
+			
+			if(video_name.length>0 && i==1)
+			{
+				let str = '<div>相關影片</div>'
+				$('.'+type_name+'-html-video').prepend(str);
+			}
+				
+			$('a#'+type_name+'link'+i).text(video_name[i-1]);
+		}
+	}
+	
+		
+	
+	
+	/*=======================================================================*/
 
 	/*Screen resize============================================*/
 	/*$(window).resize(function() {

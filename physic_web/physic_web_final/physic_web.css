@@ -31,14 +31,15 @@
 
 
 
-.art-html-content{
+.html-content{
 	
 	font-family: DFKai-sb;
 	color:#FFBB00;
 	font-size:35px;
 	
 }
-.art-html-video{
+.html-video{
+	font-size:40px;text-align:center;color:#5599FF;font-family: DFKai-sb;
 	text-align:center;
 }
 

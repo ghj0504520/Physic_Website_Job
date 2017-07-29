@@ -22,18 +22,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	    <!-- physic_web自訂的css-->
 	    <link href="../physic_web.css" rel="stylesheet">
-		<link href="../sub_html.css" rel="stylesheet">
-		
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <link href="../ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-        <script src="../ie-emulation-modes-warning.js"></script>
-		
+		<link href="../sub_html.css" rel="stylesheet">	
 		<!-- physic_web.js-->
 		<script src="../physic_web.js"></script>
-		<script src="../test.js"></script>
+		<!-- For side button movement-->
+		<script src="../side_btn_move.js"></script>
+		
+		
 		<style type="text/css">
 		    body{
 			    background-color:#444444;
@@ -404,26 +399,12 @@
 			<iframe id="totalVideo" class="video-style" src="" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<br>
-		<br>
-			<!--<div id="div-html" style="text-align:center;">
-				<embed id="inner-html" src="data/art.htm"></embed>
-			</div>-->
-		<div style="font-size:40px;text-align:center;color:#5599FF;font-family: DFKai-sb;">
-			相關影片
+		<br>	
+		<!--Add links dynamically by js-->
+		<div class="html-video">
+			<div class="art-html-video"></div>
 		</div>
-		<div class="art-html-video">
-			<a id="link1" class="art-html-content">
-				
-			</a>
-			</br>
-			<a id="link2" class="art-html-content">
-				
-			</a>
-			</br>
-			<a id="link3" class="art-html-content">
-			
-			</a>
-		</div>
+		
 		</br>
 		</br>
 		<!--
@@ -432,7 +413,7 @@
 		art_html不用data/html
 		下方為default影片
 		-->
-		<a  href="https://www.youtube.com/embed/BCkHnvDGWOY?enablejsapi=1" id="for_changing_video"></a>
+		<a  href="https://www.youtube.com/embed/BCkHnvDGWOY?enablejsapi=1" id="art_changing_video"></a>
 	</body>
 
 		

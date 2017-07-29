@@ -23,17 +23,10 @@
 	    <!-- physic_web自訂的css-->
 	    <link href="../physic_web.css" rel="stylesheet">
 		<link href="../sub_html.css" rel="stylesheet">
-		
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <link href="../ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-        <script src="../ie-emulation-modes-warning.js"></script>
-		
 		<!-- physic_web.js-->
 		<script src="../physic_web.js"></script>
-		<script src="../test.js"></script>
+		<!-- For side button movement-->
+		<script src="../side_btn_move.js"></script>
 		<style type="text/css">
 		    body{
 			    background-color:#444444;
@@ -418,16 +411,25 @@
 		</div>
 		<br>
 		<br>
-			<div id="div-html" class="embedhtml">
-				<embed id="inner-html" src="../heading_pdf/other.pdf"></embed>
-			</div>
-			<div class="appmode">
-				<a  class="applink" href="../heading_pdf/other.pdf" target="_blank" >相關內容</a>
-				<img class="apppic" src="../nsysu.png"></img>
-				<img style="position:absolute;bottom:0;right:0;height:80px;width:80px;" src="../kejibu.png"></img>
-				<br>
-				<br>
-			</div>
+		<div class="html-video">
+			<div class="oth-html-video"></div>
+		</div>
+		
+		</br>
+		</br>
+		<!--For changing youtube video link-->
+		<a  href="" id="oth_changing_video"></a>
+		
+		<div id="div-html" class="embedhtml">
+			<embed id="inner-html" src="../heading_pdf/other.pdf"></embed>
+		</div>
+		<div class="appmode">
+			<a  class="applink" href="../heading_pdf/other.pdf" target="_blank" >相關內容</a>
+			<img class="apppic" src="../nsysu.png"></img>
+			<img style="position:absolute;bottom:0;right:0;height:80px;width:80px;" src="../kejibu.png"></img>
+			<br>
+			<br>
+		</div>
 	</body>
 
 		
