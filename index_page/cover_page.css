@@ -1,0 +1,45 @@
+.fade-in {
+	opacity:0;
+	animation-name: fadeIn;
+	animation-duration:6s;/*Complete in 10 seconds, work with fadeIn to achieve display animation every 10 seconds*/
+	animation-iteration-count:1;/*Loop*/
+	animation-timing-function: ease-in-out;
+	/*animation-direction:alternate;/*Revers the animation in times 2,4,6....*/
+	/*animation-delay:6s;/*After seconds, then display the animation*/
+	z-index: -1;
+	/*
+	Hint:
+	delay can just for begin, but if you want to delay in every loop, you have to write on your own
+	*/
+}
+
+@keyframes fadeIn { 
+  0%  { opacity: 0;} 
+  10% { opacity: 0;}
+  20% { opacity: 0;}    
+  30% { opacity: 1;}
+  40% { opacity: 1;}
+  50% { opacity: 1;} 
+  60% { opacity: 1;}
+  70% { opacity: 0;}    
+  80% { opacity: 0;}
+  90% { opacity: 0;}
+  100%{ opacity: 0;}
+}
+
+.img-css{
+	/*width:150px;
+	height:150px;*/
+	border-radius: 50%;
+	z-index: -1;
+}
+.entrance {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   text-indent: -9999px; /* we don't need to see the text, but some users and robots such as Google do */
+}
