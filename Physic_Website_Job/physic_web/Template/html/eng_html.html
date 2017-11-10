@@ -32,109 +32,141 @@
 		    body{
 			    background-color:#444444;
 		    }
-			@media screen and (min-height:1153px){
-				/*Default left-img size*/
-				/*if screen width is too small*/
-				.img-circle{
-					width:120px;
-					height:120px;
-					margin-top:10px;
-				}
-			}
-			@media screen and (max-height:1152px){
-				/*if screen width is too small*/
-				.img-circle{
-					width:110px;
-					height:110px;
-					margin-top:10px;
-				}
-			}
-			@media screen and (max-height:1090px){
-				/*if screen width is too small*/
-				.img-circle{
-					width:90px;
-					height:90px;
-					margin-top:5px;
-				}
-			}
-        @media screen and (max-height:910px){
-			/*if screen width is too small*/
-			.img-circle{
-				width:80px;
-				height:80px;
-				margin-top:3px;
-			}
-		}
-		@media screen and (max-height:825px){
-			.img-circle{
-				width:60px;
-				height:60px;
-				margin-top:0px;
-			}
-			.video-style{
-				height:500px;
-				margin-top:30px;
-			}
-		}
+			 @media screen and (max-height:1153px){
+            /*Default left-img size*/
+            /*if screen width is too small*/
+            .img-circle{
 
+				width:90px;
 
-		@media screen and (max-height:655px){
-			/*for moblie phone*/
-			.img-circle{
-				width:40px;
-				height:40px;
-				margin-top:0px;
+				height:90px;
+
+				
+
 			}
 			.main-nsysu{
-				height:60px;
-				width:60px;
+
+				height:80px;
+
+				width:100px;
+
 			}
 			.kubei{
-				font-size:20px;
-			}
-			.btn-text{
-				font-size:14px;
-				
-			}
-			.video-style{
-				height:350px;
-				width:50%;
-				margin-top:30px;
-			}
-		}
-			@media screen and (max-width:1140px){
 
-				.tophead-style{
-					font-size:25px;
-					left:45%;
-				}
-				.kejibu-div{
-					font-size:15px;
-				}
-			}
-			@media screen and (max-width:940px){
+				font-size:28px;
 
-				.tophead-style{
-					font-size:25px;
+			}
+        }
+			@media screen and (max-height:910px){
+
+				.img-circle{
+
+					width:80px;
+
+					height:80px;
+
+					margin-top:3px;
+
+				}
+				.main-nsysu{
+
+					height:70px;
+
+					width:70px;
+
 				}
 				.kubei{
-					font-size:20px;
-				}
-				.navbar-nav > li > a{
-					font-size:15px;
-				}
-				.heading-text{
-					font-size:18px;
-				}
 
-				.main-nsysu{
-					height:60px;
-					width:60px;
+					font-size:25px;
+
+				}
+				.video-style{
+
+					height:500px;
+
 				}
 
 			}
-			/*==========================Enter moblie state======================*/
-			@media screen and (max-width:770px){
+			
+			@media screen and (max-height:825px){
+
+				.img-circle{
+
+					width:60px;
+
+					height:60px;
+
+					margin-top:0px;
+
+				}
+
+				.video-style{
+
+					height:400px;
+
+					margin-top:30px;
+
+				}
+				.navbar-nav > li > a{
+
+					font-size:17px;
+
+				}
+			}
+
+
+			@media screen and (max-width:1200px){
+
+
+
+				.tophead-style{
+
+					font-size:20px;
+
+					left:45%;
+
+				}
+
+				.kejibu-div{
+
+					font-size:15px;
+
+				}
+				.img-circle{
+
+					width:50px;
+
+					height:50px;
+
+					margin-top:0px;
+
+				}
+
+
+			}
+
+			@media screen and (max-width:1120px){
+
+				.navbar-nav > li > a{
+
+					font-size:14px;
+
+				}
+				.img-circle{
+
+					width:50px;
+
+					height:50px;
+
+					margin-top:0px;
+
+				}
+			}
+			
+
+			/*===========================Enter moblie state========================*/
+
+			@media screen and (max-width:990px){
 				.navbar {
 					display:none;
 				}
@@ -227,13 +259,13 @@
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<div class="container">
-				<a href="#col1" data-toggle="collapse" style="color:white;font-size:20px">Content</a>
+				<a href="#col1" data-toggle="collapse" style="color:white;font-size:20px">顯示下一層內容</a>
 				<div id="col1" class="collapse">
-					<a href="art_html.html">Art</a>
-					<a href="eng_html.html">Engineering/Product</a>
-					<a href="tec_html.html">Technology</a>
-					<a href="sci_html.html">Science</a>
-					<a href="math_html.html">Math</a>
+					<a href="art_html.html">活動影片</a>
+					<a href="eng_html.html">活動照片</a>
+					<a href="tec_html.html">網頁說明</a>
+					<a href="sci_html.html">應用的手機APP</a>
+					<a href="math_html.html">相關網頁</a>
 					<a href="oth_html.html">進階學習</a>
 					<a href="chat_html.html">留言及討論</a>
 				</div>
@@ -372,7 +404,7 @@
 			<div class="btnDiv" >
 
 				<button id="art_btn" type="button" style="background-color: inherit;border: none"><a href="art_html.html"><img class="img-circle" src="../heading_picture/art.jpg" alt="Generic placeholder image" ></a></button>
-				<p class="btn-text">Art/藝術</p>
+				<p class="btn-text">活動影片</p>
 			</div><!-- /.col-sm-1 -->
 
 
@@ -380,7 +412,7 @@
 			<div class="btnDiv">
 
 				<button id="eng_btn" type="button" style="background-color: inherit;border: none" ><a href="eng_html.html"><img class="img-circle" src="../heading_picture/engineering.jpg" alt="Generic placeholder image"></a></button>
-				<p class="btn-text">Engineering/工程</p>
+				<p class="btn-text">活動照片</p>
 			</div><!-- /.col-sm-1 -->
 
 
@@ -388,7 +420,7 @@
 			<div class="btnDiv">
 
 				<button id="tec_btn"type="button" style="background-color: inherit;border: none" ><a href="tec_html.html"><img class="img-circle" src="../heading_picture/technology.jpg" alt="Generic placeholder image"></a></button>
-				<p class="btn-text">Technology/技術</p>
+				<p class="btn-text">網頁說明</p>
 			</div><!-- /.col-sm-1 -->
 
 
@@ -396,7 +428,7 @@
 			<div class="btnDiv">
 
 				<button id="sci_btn" type="button" style="background-color: inherit;border: none"><a href="sci_html.html"><img class="img-circle" src="../heading_picture/science.jpg" alt="Generic placeholder image"></a></button>
-				<p class="btn-text">Science/科學</p>
+				<p class="btn-text">應用的手機APP</p>
 			</div><!-- /.col-sm-1 -->
 
 
@@ -404,7 +436,7 @@
 			<div class="btnDiv">
 
 				<button id="math_btn" type="button" style="background-color: inherit;border: none"><a href="math_html.html"><img class="img-circle" src="../heading_picture/math.jpg" alt="Generic placeholder image"></a></button>
-				<p class="btn-text">Mathematics/數學</p>
+				<p class="btn-text">相關網頁</p>
 			</div>
 
 			<div class="btnDiv">
@@ -439,7 +471,7 @@
 		
 		
 		<div id="div-html" class="embedhtml">
-			<embed id="inner-html" src="../heading_pdf/engineering.pdf"></embed>
+			<iframe id="inner-html" src="../heading_pdf/engineering.pdf"></iframe>
 		</div>
 		<div class="appmode">
 			<a  class="applink" href="../heading_pdf/engineering.pdf" target="_blank" >相關內容</a>

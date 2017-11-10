@@ -151,16 +151,23 @@ $(document).ready(function() {
 			$('#totalVideo').attr('src', videoArt + "&autoplay=1");
 		}
 		
-		
+		/*
 		var parent = $('#inner-html').parent();
-		var newemb = "<embed src='data/art.htm' id='inner-html'>";
+		var newemb = "<embed src='../heading_pdf/art.pdf#zoom=150' id='inner-html'></embed>";
 		$('#inner-html').remove();
 		parent.append(newemb);
 		$("#inner-html").attr("height",art_html_height);
+		$("#inner-html").addClass("inner-html"); */
+		
+		var parent = $('#inner-html').parent();
+		var newElement = "<embed src='../heading_pdf/art.pdf#zoom=150' id='inner-html'></embed>";
+	
+		$('#inner-html').remove();
+		parent.append(newElement);
+		
+		$("#inner-html").attr("height",art_html_height);
 		$("#inner-html").addClass("inner-html"); 
-		
-		
-		
+
 	});
 		
 	
@@ -175,7 +182,7 @@ $(document).ready(function() {
 		
 		
 		var parent2 = $('#totalVideo').parent();
-		var newframe = "<iframe id='totalVideo' frameborder=0 allowfullscreen></iframe>";
+		var newframe = "<embed id='totalVideo' frameborder=0 allowfullscreen></iframe>";
 		$('#totalVideo').remove();
 		
 		if(videoENG!="")
@@ -188,7 +195,7 @@ $(document).ready(function() {
 	
 		}
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='../heading_pdf/engineering.pdf#zoom=150' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/engineering.pdf#zoom=150' id='inner-html'></embed>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
@@ -220,7 +227,7 @@ $(document).ready(function() {
 		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='../heading_pdf/technology.pdf#zoom=150' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/technology.pdf#zoom=150' id='inner-html'></embed>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
@@ -249,7 +256,7 @@ $(document).ready(function() {
 		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='../heading_pdf/science.pdf#zoom=150' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/science.pdf#zoom=150' id='inner-html'></embed>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
@@ -280,7 +287,7 @@ $(document).ready(function() {
 		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='../heading_pdf/math.pdf#zoom=150' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/math.pdf#zoom=150' id='inner-html'></embed>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
@@ -310,7 +317,7 @@ $(document).ready(function() {
 		
 		
 		var parent = $('#inner-html').parent();
-		var newElement = "<embed src='../heading_pdf/other.pdf#zoom=150' id='inner-html'>";
+		var newElement = "<embed src='../heading_pdf/other.pdf#zoom=150' id='inner-html'></embed>";
 	
 		$('#inner-html').remove();
 		parent.append(newElement);
